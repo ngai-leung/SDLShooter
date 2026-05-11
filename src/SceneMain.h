@@ -3,6 +3,7 @@
 
 #include "Scene.h"
 #include "Object.h"
+#include <list>
 
 class Game;   // ★ 正确前向声明，不要用小写 game
 
@@ -18,10 +19,19 @@ public:
     void clean() override;
 
     void keyboardControls(float deltaTime);
+    void shootPlayer();
+    void updateProjectiles(float deltaTime);
+    void renderPlayerProjectiles();
 
 private:
     Player player;
     Game &game;
+
+    //创建每个物体的模板
+    ProjectilePlayer ProjectilePlayerTemplate;
+
+    std::list<ProjectilePlayer*> ProjectilePlayers;
+
 };
 
 #endif
