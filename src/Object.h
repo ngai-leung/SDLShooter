@@ -8,7 +8,8 @@ struct Player{
     SDL_Texture* texture = nullptr;  //材质
     SDL_FPoint position = {0,0};     //初始化位置
     int width = 0;                   
-    int height = 0;  /* data */      
+    int height = 0; 
+    int speed = 300; /* data */      
 };
 
 

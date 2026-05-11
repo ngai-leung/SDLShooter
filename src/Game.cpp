@@ -14,16 +14,31 @@ Game::~Game()
 
 void Game::run()
 {
+    // 初始化 deltaTime（防止第一帧之前未定义）
+    deltaTime = frameTime / 1000.0f;
+
     while (isRunning)
     {
-        handleEvents();   // 改名为 handleEvents，不再传参
-        update();
+        Uint32 frameStart = SDL_GetTicks();
+
+        handleEvents();               // 无参数
+        update(deltaTime);
         render();
+
+        Uint32 frameEnd = SDL_GetTicks();
+        Uint32 elapsed = frameEnd - frameStart;
+
+        if (elapsed < frameTime) {
+            SDL_Delay(frameTime - elapsed);
+        }
+        // 使用固定时间步长（帧率稳定）
+        deltaTime = frameTime / 1000.0f;
     }
 }
 
 void Game::init()
 {
+    frameTime = static_cast<Uint32>(1000.0f / FPS);  // 仍然 16，但意图更清晰
     // 初始化 SDL
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         SDL_LogError(SDL_LOG_CATEGORY_ERROR, "SDL could not initialize! SDL_Error: %s", SDL_GetError());
@@ -115,10 +130,10 @@ void Game::handleEvents()
     }
 }
 
-void Game::update()
+void Game::update(float deltaTime)
 {
     if (currentScene) {
-        currentScene->update();
+        currentScene->update(deltaTime);
     }
 }
 
