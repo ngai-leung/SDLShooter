@@ -8,7 +8,10 @@
 class Game
 {
 public:
-    Game();
+    static Game* getInstance(){
+        static Game instance;
+        return &instance;
+    }
     ~Game();
     void run();
     void init();
@@ -19,7 +22,17 @@ public:
     void update();
     void render();
 
+    SDL_Window* getWindow() { return window; }
+    SDL_Renderer* getRenderer() { return renderer; }
+    int getWindowWidth() { return windowWidth; }  //获取窗口宽度
+    int getWindowHeight() { return windowHeight; }   //获取窗口高度
+
 private:
+    Game();
+    //删除拷贝和赋值构造函数
+    Game(const Game&) = delete;
+    Game& operator=(const Game&) = delete;
+
     bool isRunning = true;
     Scene* currentScene = nullptr;
     SDL_Window* window = nullptr;

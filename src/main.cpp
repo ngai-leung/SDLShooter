@@ -2,7 +2,7 @@
 #include "Game.h"
 
 int main(int, char**) {
-    Game game;
+    Game& game = *Game::getInstance();  // ★ 修改
     game.init();
     game.run();
     return 0;

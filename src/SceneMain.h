@@ -2,6 +2,9 @@
 #define SCENE_MAIN_H
 
 #include "Scene.h"
+#include "Object.h"
+
+class Game;   // ★ 正确前向声明，不要用小写 game
 
 class SceneMain : public Scene {
 public:
@@ -15,8 +18,8 @@ public:
     void clean() override;
 
 private:
-
+    Player player;
+    Game &game;
 };
 
-
-#endif // SCENE_MAIN_H
+#endif

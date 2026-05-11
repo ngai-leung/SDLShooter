@@ -13,6 +13,14 @@ public:
     virtual void render() = 0;
     virtual void clean() = 0;
     virtual void handleEvent(SDL_Event* event) = 0;
+
+
+    
+
+
+
+
+
 };
 
 #endif // SCENE_H
