@@ -5,6 +5,9 @@
 #include "Object.h"
 #include <list>
 #include <random>
+#include <vector>
+
+
 
 class Game;   // ★ 正确前向声明，不要用小写 game
 
@@ -29,8 +32,13 @@ public:
     void updateEnemies(float deltaTime);
     void renderEnemies();
     void shootEnemy(Enemy* enemy);
+    void checkCollisions(); //检查碰撞
+    void createExplosion(float x, float y);
+    void updateExplosions(float deltaTime);
+    void renderExplosions();
     SDL_FPoint getDirection(Enemy* enemy);
-    void checkCollisions();
+
+
 
 
 private:
@@ -43,11 +51,16 @@ private:
     Enemy EnemyTemplate;
     ProjectilePlayer ProjectilePlayerTemplate;
     ProjectileEnemy ProjectileEnemyTemplate;
+    Explosion ExplosionTemplate;
 
     //创建每个物体的容器
     std::list<Enemy*> Enemies;
     std::list<ProjectilePlayer*> ProjectilePlayers;
     std::list<ProjectileEnemy*> ProjectileEnemies;
+    std::list<Explosion> Explosions;   // 存储爆炸效果（值语义）
+    
+    bool gameOver = false;
+
 
 };
 

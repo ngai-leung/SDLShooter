@@ -21,6 +21,7 @@ public:
     void handleEvents();
     void update(float deltaTime);
     void render();
+    void quitGame(){ isRunning = false; }
 
     SDL_Window* getWindow() { return window; }
     SDL_Renderer* getRenderer() { return renderer; }

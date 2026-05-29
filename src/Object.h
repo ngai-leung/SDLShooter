@@ -47,6 +47,19 @@ struct ProjectileEnemy{
 };
 
 
+// 爆炸效果（动画，单行纹理）
+struct Explosion {
+    SDL_Texture* texture = nullptr;   // 共享纹理
+    SDL_FPoint position = {0, 0};     // 绘制位置（左上角）
+    int frameWidth = 0;               // 每帧宽度
+    int frameHeight = 0;              // 每帧高度
+    int totalFrames = 0;              // 总帧数
+    int currentFrame = 0;             // 当前帧索引（由时间计算）
+    Uint32 startTime = 0;             // 动画开始时间（毫秒）
+    Uint32 frameDuration = 0;         // 每帧持续时间（毫秒）
+};
+
+
 
 
 
