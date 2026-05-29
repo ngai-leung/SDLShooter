@@ -10,6 +10,7 @@ struct Player{
     int width = 0;                   
     int height = 0; 
     int speed = 300;
+    int currentHealth = 100;        //当前生命值
      Uint32 coolDown =100;
      Uint32 lastShootTime = 0;     
 };
@@ -20,8 +21,9 @@ struct Enemy{
     int width = 0 ;
     int height = 0 ;
     int speed = 100;
+    int currentHealth = 2;      //当前生命值
     Uint32 coolDown =1000;     //冷却时间
-    Uint32 lastShootTime = 0; //记录上次射击时间
+    Uint32 lastShootTime = 0;  //记录上次射击时间
 };
 
 struct ProjectilePlayer{
@@ -30,6 +32,7 @@ struct ProjectilePlayer{
     int width = 0 ;
     int height = 0 ;
     int speed = 600;
+    int damage = 1;          //伤害值
 };
 
 struct ProjectileEnemy{
@@ -40,6 +43,7 @@ struct ProjectileEnemy{
     int width = 0 ;
     int height = 0 ;
     int speed = 300;
+    int damage = 1;          //伤害值
 };
 
 

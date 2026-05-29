@@ -30,6 +30,7 @@ public:
     void renderEnemies();
     void shootEnemy(Enemy* enemy);
     SDL_FPoint getDirection(Enemy* enemy);
+    void checkCollisions();
 
 
 private:

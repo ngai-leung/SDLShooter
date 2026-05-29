@@ -17,6 +17,7 @@ void SceneMain::update(float deltaTime)
     updateEnemyProjectiles(deltaTime); //更新敌机子弹
     spawEnemy(); //生成敌机
     updateEnemies(deltaTime); //更新敌机
+    checkCollisions();//检查碰撞
 }
 
 void SceneMain::render()
@@ -364,3 +365,108 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
     
     return {dx / length, dy / length};
 }
+
+    void SceneMain::checkCollisions()
+{
+    // 1. 玩家子弹 vs 敌机
+    for (auto pit = ProjectilePlayers.begin(); pit != ProjectilePlayers.end(); ) {
+        ProjectilePlayer* proj = *pit;
+        SDL_Rect projRect = {
+            static_cast<int>(proj->position.x),
+            static_cast<int>(proj->position.y),
+            proj->width,
+            proj->height
+        };
+        bool hit = false;
+
+        for (auto eit = Enemies.begin(); eit != Enemies.end(); ) {
+            Enemy* enemy = *eit;
+            SDL_Rect enemyRect = {
+                static_cast<int>(enemy->position.x),
+                static_cast<int>(enemy->position.y),
+                enemy->width,
+                enemy->height
+            };
+            if (SDL_HasIntersection(&projRect, &enemyRect)) {
+                // 子弹击中敌机
+                enemy->currentHealth -= proj->damage;
+                hit = true;  // 子弹命中，无论敌机是否死亡，子弹都消失
+                if (enemy->currentHealth <= 0) {
+                    // 敌机死亡，从列表中移除并删除
+                    delete enemy;
+                    eit = Enemies.erase(eit);
+                } else {
+                    ++eit;
+                }
+                break; // 一颗子弹只击中一个敌人
+            } else {
+                ++eit;
+            }
+        }
+
+        if (hit) {
+            delete proj;
+            pit = ProjectilePlayers.erase(pit);
+        } else {
+            ++pit;
+        }
+    }
+
+    // 2. 敌机子弹 vs 玩家
+    for (auto pit = ProjectileEnemies.begin(); pit != ProjectileEnemies.end(); ) {
+        ProjectileEnemy* proj = *pit;
+        SDL_Rect projRect = {
+            static_cast<int>(proj->position.x),
+            static_cast<int>(proj->position.y),
+            proj->width,
+            proj->height
+        };
+        SDL_Rect playerRect = {
+            static_cast<int>(player.position.x),
+            static_cast<int>(player.position.y),
+            player.width,
+            player.height
+        };
+        if (SDL_HasIntersection(&projRect, &playerRect)) {
+            player.currentHealth -= proj->damage;
+            delete proj;
+            pit = ProjectileEnemies.erase(pit);
+            // 如果玩家死亡，可以设置游戏结束标志（后面实现）
+            if (player.currentHealth <= 0) {
+                // 例如：game.quitGame();  但需要先提供 Game::quitGame()
+                // 暂时只打印日志，后续完善
+                SDL_Log("Player died!");
+            }
+        } else {
+            ++pit;
+        }
+    }
+
+    // 3. 玩家 vs 敌机（直接碰撞）
+    SDL_Rect playerRect = {
+        static_cast<int>(player.position.x),
+        static_cast<int>(player.position.y),
+        player.width,
+        player.height
+    };
+    for (auto eit = Enemies.begin(); eit != Enemies.end(); ) {
+        Enemy* enemy = *eit;
+        SDL_Rect enemyRect = {
+            static_cast<int>(enemy->position.x),
+            static_cast<int>(enemy->position.y),
+            enemy->width,
+            enemy->height
+        };
+        if (SDL_HasIntersection(&playerRect, &enemyRect)) {
+            player.currentHealth -= 10;   // 碰撞伤害可自行调整
+            delete enemy;
+            eit = Enemies.erase(eit);
+            if (player.currentHealth <= 0) {
+                SDL_Log("Player died by collision!");
+            }
+        } else {
+            ++eit;
+        }
+    }
+}
+
