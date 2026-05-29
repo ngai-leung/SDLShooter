@@ -2,6 +2,7 @@
 #include "SDL.h"
 #include "SDL_image.h"
 #include "Game.h"
+#include <random>
 
 SceneMain::SceneMain() : game(*Game::getInstance())
 {
@@ -13,12 +14,18 @@ void SceneMain::update(float deltaTime)
 {
     keyboardControls(deltaTime);
     updateProjectiles(deltaTime);
+    updateEnemyProjectiles(deltaTime); //更新敌机子弹
+    spawEnemy(); //生成敌机
+    updateEnemies(deltaTime); //更新敌机
 }
 
 void SceneMain::render()
 {
     // 先渲染子弹
     renderPlayerProjectiles();
+
+    //渲染敌机子弹
+    renderEnemyProjectiles();
 
     // 再渲染玩家
     if (!player.texture) return;
@@ -30,12 +37,21 @@ void SceneMain::render()
         player.height
     };
     SDL_RenderCopy(game.getRenderer(), player.texture, NULL, &playerRect);
+
+    // 最后渲染敌机
+    renderEnemies();
 }
 
 void SceneMain::handleEvent(SDL_Event *event) {}
 
 void SceneMain::init()
 {
+    //随机生成敌机
+    std::random_device rd; // 用于生成随机数种子
+    gen = std::mt19937(rd());
+    dis =std::uniform_real_distribution<float>(0.0f,1.0f);
+    
+
     // 1. 加载玩家纹理
     player.texture = IMG_LoadTexture(game.getRenderer(), "assets/image/SpaceShip.png");
     if (!player.texture) {
@@ -59,11 +75,37 @@ void SceneMain::init()
         // 不影响玩家，但子弹将无法使用
         return;
     }
+
     SDL_QueryTexture(ProjectilePlayerTemplate.texture, NULL, NULL,
                      &ProjectilePlayerTemplate.width,
                      &ProjectilePlayerTemplate.height);
     ProjectilePlayerTemplate.width /= 4;
     ProjectilePlayerTemplate.height /= 4;
+
+    //初始化敌机
+    EnemyTemplate.texture = IMG_LoadTexture(game.getRenderer(), "assets/image/insect-2.png");
+    //加载敌机纹理
+    if (!EnemyTemplate.texture) {
+        SDL_LogError(SDL_LOG_CATEGORY_ERROR,
+                     "Failed to load enemy texture: %s", IMG_GetError());
+        // 不影响玩家，但子弹将无法使用
+        return;
+    }
+
+    SDL_QueryTexture(EnemyTemplate.texture, NULL, NULL,
+                     &EnemyTemplate.width,
+                     &EnemyTemplate.height);
+    EnemyTemplate.width /= 4;
+    EnemyTemplate.height /= 4;
+
+    //初始化敌机射击物模版
+    ProjectileEnemyTemplate.texture = IMG_LoadTexture(game.getRenderer(), "assets/image/bullet-1.png");
+    SDL_QueryTexture(ProjectileEnemyTemplate.texture, NULL, NULL,
+                     &ProjectileEnemyTemplate.width,
+                     &ProjectileEnemyTemplate.height);
+    ProjectileEnemyTemplate.width /= 4;
+    ProjectileEnemyTemplate.height /=4;                 
+
 }
 
 void SceneMain::clean()
@@ -73,6 +115,20 @@ void SceneMain::clean()
         delete projectile;
     }
     ProjectilePlayers.clear();
+
+
+    // 清理活跃敌机
+    for (auto enemy : Enemies) {
+        delete enemy;
+    }
+    Enemies.clear();
+
+    // 清理活跃敌机射击物
+    for (auto projectile : ProjectileEnemies) {
+        delete projectile;
+    }
+    ProjectileEnemies.clear();
+ 
 
     // 销毁玩家纹理
     if (player.texture) {
@@ -84,6 +140,18 @@ void SceneMain::clean()
     if (ProjectilePlayerTemplate.texture) {
         SDL_DestroyTexture(ProjectilePlayerTemplate.texture);
         ProjectilePlayerTemplate.texture = nullptr;
+    }
+
+    // 销毁敌机模板纹理
+    if (EnemyTemplate.texture) {
+        SDL_DestroyTexture(EnemyTemplate.texture);
+        EnemyTemplate.texture = nullptr;
+    }
+
+    // 销毁敌机射击物模版纹理
+    if (ProjectileEnemyTemplate.texture) {
+        SDL_DestroyTexture(ProjectileEnemyTemplate.texture);
+        ProjectileEnemyTemplate.texture = nullptr;
     }
 }
 
@@ -155,6 +223,27 @@ void SceneMain::updateProjectiles(float deltaTime)
     }
 }
 
+void SceneMain::updateEnemyProjectiles(float deltaTime)
+{
+    for (auto it = ProjectileEnemies.begin(); it != ProjectileEnemies.end(); ) {
+        auto projectile = *it;
+        // 根据方向向量移动
+        projectile->position.x += projectile->direction.x * projectile->speed * deltaTime;
+        projectile->position.y += projectile->direction.y * projectile->speed * deltaTime;
+
+        // 飞出屏幕任意边界则销毁（简单处理：超出窗口范围）
+        if (projectile->position.x + projectile->width < 0 ||
+            projectile->position.x > game.getWindowWidth() ||
+            projectile->position.y + projectile->height < 0 ||
+            projectile->position.y > game.getWindowHeight()) {
+            delete projectile;
+            it = ProjectileEnemies.erase(it);
+        } else {
+            ++it;
+        }
+    }
+}
+
 void SceneMain::renderPlayerProjectiles()
 {
     for (auto projectile : ProjectilePlayers) {
@@ -166,4 +255,112 @@ void SceneMain::renderPlayerProjectiles()
         };
         SDL_RenderCopy(game.getRenderer(), projectile->texture, NULL, &projectileRect);
     }
+}
+
+void SceneMain::renderEnemyProjectiles()
+{
+    for (auto projectile : ProjectileEnemies) {
+        SDL_Rect destRect = {
+            static_cast<int>(projectile->position.x),
+            static_cast<int>(projectile->position.y),
+            projectile->width,
+            projectile->height
+        };
+
+        // 计算旋转角度（弧度转度数，SDL 中使用度数）
+        // direction 向量 (dx, dy) 指向子弹运动方向
+        // 若子弹图片默认朝上（0° 指向屏幕顶部），则需计算 atan2(dy, dx) 再减去 90°
+        float angle = atan2(projectile->direction.y, projectile->direction.x) * 180.0f / M_PI + 90.0f;
+        // 注意：SDL_RenderCopyEx 的 angle 是顺时针旋转的度数，正数表示顺时针。
+
+        SDL_Point center = { projectile->width / 2, projectile->height / 2 };
+        SDL_RenderCopyEx(game.getRenderer(),
+                         projectile->texture,
+                         NULL,
+                         &destRect,
+                         angle,
+                         &center,
+                         SDL_FLIP_NONE);
+    }
+}
+
+void SceneMain::spawEnemy()
+{
+    if(dis(gen) > 1/60.0f){ return; }
+    Enemy* enemy = new Enemy(EnemyTemplate);
+    int maxX = game.getWindowWidth() - enemy->width;
+    enemy->position.x = (maxX > 0) ? (dis(gen) * maxX) : 0;
+    enemy->position.y = -enemy->height;
+    Enemies.push_back(enemy);
+}
+
+void SceneMain::updateEnemies(float deltaTime)
+{
+    auto currTime = SDL_GetTicks(); //获取当前时间
+    for (auto it = Enemies.begin(); it != Enemies.end(); ) {
+        auto enemy = *it;
+        enemy->position.y += enemy->speed * deltaTime;
+
+        // 飞出屏幕顶部则销毁
+        if (enemy->position.y > game.getWindowHeight()) {
+            delete enemy;
+            it = Enemies.erase(it);
+        } else {
+            if (currTime - enemy->lastShootTime >= enemy->coolDown) {
+                shootEnemy(enemy);
+                enemy->lastShootTime = currTime;
+            }
+            ++it;
+        }
+    }
+}
+
+void SceneMain::renderEnemies()
+{
+    for (auto enemy : Enemies) {
+        SDL_Rect enemyRect = {
+            static_cast<int>(enemy->position.x),
+            static_cast<int>(enemy->position.y),
+            enemy->width,
+            enemy->height
+        };
+        SDL_RenderCopy(game.getRenderer(), enemy->texture, NULL, &enemyRect);
+    }
+}
+
+void SceneMain::shootEnemy(Enemy* enemy)
+{
+    if (!ProjectileEnemyTemplate.texture) return;
+
+    auto projectile = new ProjectileEnemy;
+    // 复制模板属性
+    projectile->texture = ProjectileEnemyTemplate.texture;
+    projectile->width  = ProjectileEnemyTemplate.width;
+    projectile->height = ProjectileEnemyTemplate.height;
+    projectile->speed  = ProjectileEnemyTemplate.speed;  // 需要确保模板有有效值
+
+    // 计算子弹出生位置（敌机中心）
+    projectile->position.x = enemy->position.x + enemy->width/2.0f - projectile->width/2.0f;
+    projectile->position.y = enemy->position.y + enemy->height/2.0f - projectile->height/2.0f;
+
+    // 计算方向
+    SDL_FPoint dir = getDirection(enemy);
+    // 将方向存入 direction 供更新使用
+    projectile->direction = dir;
+
+    ProjectileEnemies.push_back(projectile);
+}
+
+SDL_FPoint SceneMain::getDirection(Enemy* enemy)
+{
+    // 计算从敌机中心指向玩家中心的向量
+    float dx = (player.position.x + player.width / 2.0f) - (enemy->position.x + enemy->width / 2.0f);
+    float dy = (player.position.y + player.height / 2.0f) - (enemy->position.y + enemy->height / 2.0f);
+    
+    float length = sqrtf(dx * dx + dy * dy);
+    if (length < 1e-6f) {  // 避免除零，若重合则默认向下
+        return {0.0f, 1.0f};
+    }
+    
+    return {dx / length, dy / length};
 }
