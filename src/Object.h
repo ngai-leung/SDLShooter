@@ -70,7 +70,8 @@ struct Item {
     int width = 0;
     int height = 0;
     ItemType type = ItemType::Life;
-    float speed = 100.0f;
+    float speed = 10.0f;
+    int bounceCount = 0;      // 已碰撞次数（用于左右碰壁）
 };
 
 

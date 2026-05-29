@@ -678,20 +678,17 @@ void SceneMain::renderExplosions()
 
 void SceneMain::dropItem(float x, float y)
 {
-    // 30% 掉落概率
     if (dis(gen) > 0.2f) return;
 
-    // 随机决定道具类型（等概率）
     int r = rand() % 3;
-    ItemType type;
     Item* templateItem = nullptr;
     switch (r) {
-        case 0: type = ItemType::Life;   templateItem = &ItemLifeTemplate; break;
-        case 1: type = ItemType::Shield; templateItem = &ItemShieldTemplate; break;
-        case 2: type = ItemType::Time;   templateItem = &ItemTimeTemplate; break;
+        case 0: templateItem = &ItemLifeTemplate; break;
+        case 1: templateItem = &ItemShieldTemplate; break;
+        case 2: templateItem = &ItemTimeTemplate; break;
         default: return;
     }
-    if (!templateItem || !templateItem->texture) return;
+    if (!templateItem->texture) return;
 
     Item* item = new Item();
     item->texture = templateItem->texture;
@@ -699,31 +696,79 @@ void SceneMain::dropItem(float x, float y)
     item->height = templateItem->height;
     item->position.x = x - item->width / 2.0f;
     item->position.y = y - item->height / 2.0f;
-    item->direction = {0, 1};
-    item->speed = 100;
-    item->type = type;
+
+    // 随机方向（角度 0~360°）
+    float angle = (static_cast<float>(rand()) / RAND_MAX) * 2.0f * M_PI;
+    item->direction.x = cosf(angle);
+    item->direction.y = sinf(angle);
+
+    // 确保速度不为零
+    if (fabs(item->direction.x) < 0.01f) item->direction.x = (rand() % 2 == 0) ? 0.01f : -0.01f;
+    if (fabs(item->direction.y) < 0.01f) item->direction.y = (rand() % 2 == 0) ? 0.01f : -0.01f;
+
+    // 归一化（确保单位向量）
+    float len = sqrtf(item->direction.x * item->direction.x + item->direction.y * item->direction.y);
+    item->direction.x /= len;
+    item->direction.y /= len;
+
+    item->speed = 100.0f;                 // 恒定速度
+    item->type = (ItemType)r;
+    item->bounceCount = 0;
+
     items.push_back(item);
 }
 
 void SceneMain::updateItems(float deltaTime)
 {
-      for (auto it = items.begin(); it != items.end(); ) {
+    const float DAMP = 0.9f;      // 每次反弹速度保留 90%
+    const float MIN_SPEED = 0.05f;
+
+    for (auto it = items.begin(); it != items.end(); ) {
         Item* item = *it;
+
         // 移动
         item->position.x += item->direction.x * item->speed * deltaTime;
         item->position.y += item->direction.y * item->speed * deltaTime;
 
-        // 超出屏幕底部或顶部则销毁
-        if (item->position.y > game.getWindowHeight() ||
-            item->position.y + item->height < 0 ||
-            item->position.x + item->width < 0 ||
-            item->position.x > game.getWindowWidth()) {
+        // 左右边界碰撞（反弹 + 能量损失）
+        int left = 0;
+        int right = game.getWindowWidth() - item->width;
+        if (item->position.x < left) {
+            item->position.x = left;
+            item->direction.x = -item->direction.x * DAMP;
+            item->bounceCount++;
+        } else if (item->position.x > right) {
+            item->position.x = right;
+            item->direction.x = -item->direction.x * DAMP;
+            item->bounceCount++;
+        }
+
+        // 上下边界碰撞（反弹 + 能量损失）
+        int top = 0;
+        int bottom = game.getWindowHeight() - item->height;
+        if (item->position.y < top) {
+            item->position.y = top;
+            item->direction.y = -item->direction.y * DAMP;
+            item->bounceCount++;
+        } else if (item->position.y > bottom) {
+            item->position.y = bottom;
+            item->direction.y = -item->direction.y * DAMP;
+            item->bounceCount++;
+        }
+
+        // 速度过小时停止（避免无限抖动）
+        if (fabs(item->direction.x) < MIN_SPEED) item->direction.x = 0;
+        if (fabs(item->direction.y) < MIN_SPEED) item->direction.y = 0;
+
+        // 碰撞次数达到 3 次，删除物品
+        if (item->bounceCount >= 3) {
             delete item;
             it = items.erase(it);
-        } else {
-            ++it;
+            continue;
         }
-    }  
+
+        ++it;
+    }
 }
 
 void SceneMain::renderItems()
