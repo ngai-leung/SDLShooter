@@ -17,6 +17,23 @@ void SceneMain::update(float deltaTime)
     updateExplosions(deltaTime);
     return;
     }
+
+    // 更新道具效果
+    Uint32 now = SDL_GetTicks();
+    if (hasShield && now >= shieldEndTime) {
+        hasShield = false;
+        SDL_SetTextureColorMod(player.texture, 255, 255, 255);   // 恢复白色
+    }
+    if (timeSlowActive && now >= timeSlowEndTime) {
+        timeSlowActive = false;
+        // 恢复所有敌人的速度
+        for (auto enemy : Enemies) {
+            enemy->speed = originalEnemySpeed;
+        }
+        for (auto bullet : ProjectileEnemies) {
+            bullet->speed = originalEnemyBulletSpeed;
+        }
+    }
     
     keyboardControls(deltaTime);
     updateProjectiles(deltaTime);
@@ -24,7 +41,9 @@ void SceneMain::update(float deltaTime)
     spawEnemy(); //生成敌机
     updateEnemies(deltaTime); //更新敌机
     checkCollisions();//检查碰撞
-    updateExplosions(deltaTime);   // 最后更新爆炸效果
+    updateItems(deltaTime); // 更新道具
+    updateExplosions(deltaTime);   // 更新爆炸效果
+    
 }
 
 void SceneMain::render()
@@ -46,10 +65,12 @@ void SceneMain::render()
         SDL_RenderCopy(game.getRenderer(), player.texture, NULL, &playerRect);
     }
 
-    // 最后渲染敌机
+    // 渲染敌机
     renderEnemies();
-
-    renderExplosions(); // 最后渲染爆炸效果
+    // 渲染道具
+    renderItems();
+    // 最后渲染爆炸效果
+    renderExplosions(); 
 }
 
 void SceneMain::handleEvent(SDL_Event *event) {}
@@ -133,8 +154,33 @@ void SceneMain::init()
     // 每帧持续时间：例如 FPS=20 → 50ms
     ExplosionTemplate.frameDuration = 1000 / 20;   // 20帧/秒
     // 注意：如果你在 Explosion 结构体中有 FPS 字段，也可用 FPS 换算
-    
 
+    //初始化生命道具
+    ItemLifeTemplate.texture = IMG_LoadTexture(game.getRenderer(), "assets/image/bonus_life.png");
+    SDL_QueryTexture(ItemLifeTemplate.texture, NULL, NULL,
+                     &ItemLifeTemplate.width,
+                     &ItemLifeTemplate.height);
+    ItemLifeTemplate.width /= 4;
+    ItemLifeTemplate.height /= 4;
+
+    // 初始化护盾道具
+    ItemShieldTemplate.texture = IMG_LoadTexture(game.getRenderer(), "assets/image/bonus_shield.png");
+    if (!ItemShieldTemplate.texture) {
+        SDL_LogError(SDL_LOG_CATEGORY_ERROR, "Failed to load shield texture: %s", IMG_GetError());
+        // 可选：继续运行，只是无护盾道具
+    }
+    SDL_QueryTexture(ItemShieldTemplate.texture, NULL, NULL, &ItemShieldTemplate.width, &ItemShieldTemplate.height);
+    ItemShieldTemplate.width /= 4;
+    ItemShieldTemplate.height /= 4;
+
+    // 初始化时间道具
+    ItemTimeTemplate.texture = IMG_LoadTexture(game.getRenderer(), "assets/image/bonus_time.png");
+    if (!ItemTimeTemplate.texture) {
+        SDL_LogError(SDL_LOG_CATEGORY_ERROR, "Failed to load time texture: %s", IMG_GetError());
+    }
+    SDL_QueryTexture(ItemTimeTemplate.texture, NULL, NULL, &ItemTimeTemplate.width, &ItemTimeTemplate.height);
+    ItemTimeTemplate.width /= 4;
+    ItemTimeTemplate.height /= 4;
 
 }
 
@@ -158,7 +204,15 @@ void SceneMain::clean()
         delete projectile;
     }
     ProjectileEnemies.clear();
- 
+    
+    //清理道具
+    for(auto &item : items) {
+        if(item != nullptr) {
+            delete item;
+        }
+    }
+    items.clear();
+
 
     // 销毁玩家纹理
     if (player.texture) {
@@ -183,6 +237,24 @@ void SceneMain::clean()
         SDL_DestroyTexture(ProjectileEnemyTemplate.texture);
         ProjectileEnemyTemplate.texture = nullptr;
     }
+
+    //销毁道具纹理
+    if (ItemLifeTemplate.texture) {
+        SDL_DestroyTexture(ItemLifeTemplate.texture);
+        ItemLifeTemplate.texture = nullptr;
+    }
+
+    if (ItemShieldTemplate.texture) {
+    SDL_DestroyTexture(ItemShieldTemplate.texture);
+    ItemShieldTemplate.texture = nullptr;
+    }
+
+    if (ItemTimeTemplate.texture) {
+        SDL_DestroyTexture(ItemTimeTemplate.texture);
+        ItemTimeTemplate.texture = nullptr;
+    }
+
+
 }
 
 void SceneMain::keyboardControls(float deltaTime)
@@ -318,6 +390,10 @@ void SceneMain::spawEnemy()
 {
     if(dis(gen) > 1/60.0f){ return; }
     Enemy* enemy = new Enemy(EnemyTemplate);
+    enemy->speed = EnemyTemplate.speed;
+    if (timeSlowActive) {
+        enemy->speed /= 2;
+        }
     int maxX = game.getWindowWidth() - enemy->width;
     enemy->position.x = (maxX > 0) ? (dis(gen) * maxX) : 0;
     enemy->position.y = -enemy->height;
@@ -368,6 +444,9 @@ void SceneMain::shootEnemy(Enemy* enemy)
     projectile->width  = ProjectileEnemyTemplate.width;
     projectile->height = ProjectileEnemyTemplate.height;
     projectile->speed  = ProjectileEnemyTemplate.speed;  // 需要确保模板有有效值
+    if (timeSlowActive) {
+        projectile->speed /= 2;
+        }
 
     // 计算子弹出生位置（敌机中心）
     projectile->position.x = enemy->position.x + enemy->width/2.0f - projectile->width/2.0f;
@@ -419,6 +498,7 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
                 enemy->height
             };
             if (SDL_HasIntersection(&projRect, &enemyRect)) {
+                
                 // 子弹击中敌机
                 enemy->currentHealth -= proj->damage;
                 hit = true;  // 子弹命中，无论敌机是否死亡，子弹都消失
@@ -426,6 +506,7 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
                     float centerX = enemy->position.x + enemy->width / 2.0f;
                     float centerY = enemy->position.y + enemy->height / 2.0f;
                     createExplosion(centerX, centerY);   // 生成爆炸
+                    dropItem(centerX, centerY);   // 生成掉落物
                     // 敌机死亡，从列表中移除并删除
                     delete enemy;
                     eit = Enemies.erase(eit);
@@ -462,7 +543,9 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
             player.height
         };
         if (SDL_HasIntersection(&projRect, &playerRect)) {
-            player.currentHealth -= proj->damage;
+                if (!hasShield) {
+                player.currentHealth -= proj->damage;// 有护盾时什么都不做，不扣血也不取消护盾
+                }
             delete proj;
             pit = ProjectileEnemies.erase(pit);
             // 如果玩家死亡，可以设置游戏结束标志（后面实现）
@@ -487,7 +570,7 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
         player.width,
         player.height
     };
-        for(auto eit = Enemies.begin(); eit != Enemies.end(); ) {
+    for (auto eit = Enemies.begin(); eit != Enemies.end(); ) {
         Enemy* enemy = *eit;
         SDL_Rect enemyRect = {
             static_cast<int>(enemy->position.x),
@@ -496,20 +579,48 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
             enemy->height
         };
         if (SDL_HasIntersection(&playerRect, &enemyRect)) {
-            player.currentHealth -= 40;
+            // 生成爆炸特效（敌机中心）
+            float centerX = enemy->position.x + enemy->width / 2.0f;
+            float centerY = enemy->position.y + enemy->height / 2.0f;
+            createExplosion(centerX, centerY);
+
+            // 扣血（有护盾则免伤）
+            if (!hasShield) {
+                player.currentHealth -= 40;
+            }
+
+            // 删除敌机
             delete enemy;
             eit = Enemies.erase(eit);
+
+            // 玩家死亡处理
             if (player.currentHealth <= 0 && !gameOver) {
-                float centerX = player.position.x + player.width / 2.0f;
-                float centerY = player.position.y + player.height / 2.0f;
-                createExplosion(centerX, centerY);
+                float playerCenterX = player.position.x + player.width / 2.0f;
+                float playerCenterY = player.position.y + player.height / 2.0f;
+                createExplosion(playerCenterX, playerCenterY);
                 gameOver = true;
                 SDL_Log("Player died by collision!");
-               // game.quitGame();
-               // return;
             }
         } else {
             ++eit;
+        }
+    }
+
+    // 4. 玩家 vs 物品
+    for (auto it = items.begin(); it != items.end(); ) {
+        Item* item = *it;
+        SDL_Rect itemRect = {
+            static_cast<int>(item->position.x),
+            static_cast<int>(item->position.y),
+            item->width,
+            item->height
+        };
+        if (SDL_HasIntersection(&playerRect, &itemRect)) {
+            applyItemEffect(item);
+            delete item;
+            it = items.erase(it);
+        } else {
+            ++it;
         }
     }
 }
@@ -562,5 +673,102 @@ void SceneMain::renderExplosions()
             exp.frameHeight
         };
         SDL_RenderCopy(game.getRenderer(), exp.texture, &srcRect, &dstRect);
+    }
+}
+
+void SceneMain::dropItem(float x, float y)
+{
+    // 30% 掉落概率
+    if (dis(gen) > 0.2f) return;
+
+    // 随机决定道具类型（等概率）
+    int r = rand() % 3;
+    ItemType type;
+    Item* templateItem = nullptr;
+    switch (r) {
+        case 0: type = ItemType::Life;   templateItem = &ItemLifeTemplate; break;
+        case 1: type = ItemType::Shield; templateItem = &ItemShieldTemplate; break;
+        case 2: type = ItemType::Time;   templateItem = &ItemTimeTemplate; break;
+        default: return;
+    }
+    if (!templateItem || !templateItem->texture) return;
+
+    Item* item = new Item();
+    item->texture = templateItem->texture;
+    item->width = templateItem->width;
+    item->height = templateItem->height;
+    item->position.x = x - item->width / 2.0f;
+    item->position.y = y - item->height / 2.0f;
+    item->direction = {0, 1};
+    item->speed = 100;
+    item->type = type;
+    items.push_back(item);
+}
+
+void SceneMain::updateItems(float deltaTime)
+{
+      for (auto it = items.begin(); it != items.end(); ) {
+        Item* item = *it;
+        // 移动
+        item->position.x += item->direction.x * item->speed * deltaTime;
+        item->position.y += item->direction.y * item->speed * deltaTime;
+
+        // 超出屏幕底部或顶部则销毁
+        if (item->position.y > game.getWindowHeight() ||
+            item->position.y + item->height < 0 ||
+            item->position.x + item->width < 0 ||
+            item->position.x > game.getWindowWidth()) {
+            delete item;
+            it = items.erase(it);
+        } else {
+            ++it;
+        }
+    }  
+}
+
+void SceneMain::renderItems()
+{
+        for (auto item : items) {
+        SDL_Rect dstRect = {
+            static_cast<int>(item->position.x),
+            static_cast<int>(item->position.y),
+            item->width,
+            item->height
+        };
+        SDL_RenderCopy(game.getRenderer(), item->texture, NULL, &dstRect);
+    }
+}
+
+void SceneMain::applyItemEffect(Item* item)
+{
+    Uint32 now = SDL_GetTicks();
+    switch (item->type) {
+        case ItemType::Life:
+            player.currentHealth += 20;
+            if (player.currentHealth > 100) player.currentHealth = 100;
+            break;
+        case ItemType::Shield:
+            // 护盾持续5秒，期间无敌
+            hasShield = true;
+            shieldEndTime = now + 5000;  // 5秒
+            // 设置纹理颜色为金色
+            SDL_SetTextureColorMod(player.texture, 255, 215, 0);
+            break;
+        case ItemType::Time:
+            // 时间减速：敌人和敌人子弹速度减半，持续5秒
+            if (!timeSlowActive) {
+                originalEnemySpeed = EnemyTemplate.speed;
+                originalEnemyBulletSpeed = ProjectileEnemyTemplate.speed;
+            }
+            timeSlowActive = true;
+            timeSlowEndTime = now + 5000;
+            // 立即应用减速
+            for (auto enemy : Enemies) {
+                enemy->speed = originalEnemySpeed / 2;
+            }
+            for (auto bullet : ProjectileEnemies) {
+                bullet->speed = originalEnemyBulletSpeed / 2;
+            }
+            break;
     }
 }

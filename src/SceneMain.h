@@ -36,6 +36,10 @@ public:
     void createExplosion(float x, float y);
     void updateExplosions(float deltaTime);
     void renderExplosions();
+    void dropItem(float x, float y);               // 在敌机位置掉落物品
+    void updateItems(float deltaTime);             // 更新所有物品
+    void renderItems();                            // 渲染物品
+    void applyItemEffect(Item* item);              // 玩家拾取物品的效果
     SDL_FPoint getDirection(Enemy* enemy);
 
 
@@ -52,14 +56,26 @@ private:
     ProjectilePlayer ProjectilePlayerTemplate;
     ProjectileEnemy ProjectileEnemyTemplate;
     Explosion ExplosionTemplate;
+    Item ItemLifeTemplate;
+    Item ItemShieldTemplate;
+    Item ItemTimeTemplate;
+
 
     //创建每个物体的容器
     std::list<Enemy*> Enemies;
     std::list<ProjectilePlayer*> ProjectilePlayers;
     std::list<ProjectileEnemy*> ProjectileEnemies;
-    std::list<Explosion> Explosions;   // 存储爆炸效果（值语义）
+    std::list<Explosion> Explosions;
+    std::list<Item*> items;   // 存储爆炸效果（值语义）
     
     bool gameOver = false;
+    // 道具效果标志
+    bool hasShield = false;            // 是否拥有护盾
+    Uint32 shieldEndTime = 0;          // 护盾结束时间（毫秒）
+    bool timeSlowActive = false;       // 时间减速是否激活
+    Uint32 timeSlowEndTime = 0;        // 减速结束时间
+    float originalEnemySpeed = 100;    // 记录敌人原始速度（用于恢复）
+    float originalEnemyBulletSpeed = 300; // 原始子弹速度
 
 
 };
