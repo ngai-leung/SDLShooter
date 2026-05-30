@@ -35,19 +35,6 @@ events:
     found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\VCPackages"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\bin\\Roslyn"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\DiagnosticsHub\\Collector"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\\\MSBuild\\Current\\Bin\\amd64"
-        - "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\"
-        - "D:\\Microsoft VS Code"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -65,16 +52,6 @@ events:
         - "C:\\msys64\\ucrt64\\bin"
         - "C:\\Library\\SDL2"
         - "C:\\Library\\SDL2\\lib\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja"
-      ENV{INCLUDE}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\um"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\shared"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\winrt"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\cppwinrt"
   -
     kind: "message-v1"
     backtrace:
@@ -90,8 +67,8 @@ events:
       
       The output was:
       0
-      适用于 .NET Framework MSBuild 版本 17.14.14+a129329f1
-      生成启动时间为 12/5/2026 20:00:15。
+      适用于 .NET Framework MSBuild 版本 18.5.4+cb4e32d21
+      生成启动时间为 30/5/2026 7:16:11。
       
       节点 1 上的项目“C:\\SDLShooter\\build\\CMakeFiles\\4.2.3-msvc3\\CompilerIdC\\CompilerIdC.vcxproj”(默认目标)。
       PrepareForBuild:
@@ -102,15 +79,15 @@ events:
         正在创建“Debug\\CompilerIdC.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
         正在对“Debug\\CompilerIdC.tlog\\unsuccessfulbuild”执行 Touch 任务。
       ClCompile:
-        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
         CMakeCCompilerId.c
       Link:
-        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
         CompilerIdC.vcxproj -> C:\\SDLShooter\\build\\CMakeFiles\\4.2.3-msvc3\\CompilerIdC\\CompilerIdC.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
         :VCEnd
-        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
       FinalizeBuildStatus:
         正在删除文件“Debug\\CompilerIdC.tlog\\unsuccessfulbuild”。
         正在对“Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate”执行 Touch 任务。
@@ -120,7 +97,7 @@ events:
           0 个警告
           0 个错误
       
-      已用时间 00:00:00.53
+      已用时间 00:00:00.84
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -152,19 +129,7 @@ events:
     names:
       - "link"
     candidate_directories:
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/"
-      - "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/"
-      - "D:/Microsoft VS Code/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/SysWOW64/"
       - "C:/Windows/"
@@ -182,26 +147,11 @@ events:
       - "C:/msys64/ucrt64/bin/"
       - "C:/Library/SDL2/"
       - "C:/Library/SDL2/lib/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/"
     searched_directories:
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.com"
-    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\VCPackages"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\bin\\Roslyn"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\DiagnosticsHub\\Collector"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\\\MSBuild\\Current\\Bin\\amd64"
-        - "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\"
-        - "D:\\Microsoft VS Code"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -219,8 +169,6 @@ events:
         - "C:\\msys64\\ucrt64\\bin"
         - "C:\\Library\\SDL2"
         - "C:\\Library\\SDL2\\lib\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja"
   -
     kind: "find-v1"
     backtrace:
@@ -243,19 +191,7 @@ events:
     names:
       - "lld-link"
     candidate_directories:
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/"
-      - "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/"
-      - "D:/Microsoft VS Code/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/SysWOW64/"
       - "C:/Windows/"
@@ -273,48 +209,10 @@ events:
       - "C:/msys64/ucrt64/bin/"
       - "C:/Library/SDL2/"
       - "C:/Library/SDL2/lib/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/"
     searched_directories:
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/lld-link"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/lld-link.com"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/lld-link.exe"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/lld-link"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/x64/lld-link.com"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/x64/lld-link.exe"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/x64/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/lld-link"
-      - "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/lld-link.com"
-      - "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/lld-link.exe"
-      - "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/lld-link"
-      - "D:/Microsoft VS Code/lld-link.com"
-      - "D:/Microsoft VS Code/lld-link.exe"
-      - "D:/Microsoft VS Code/lld-link"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.com"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.exe"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link"
@@ -366,28 +264,9 @@ events:
       - "C:/Library/SDL2/lib/x64/lld-link.com"
       - "C:/Library/SDL2/lib/x64/lld-link.exe"
       - "C:/Library/SDL2/lib/x64/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/lld-link"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/lld-link.com"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/lld-link.exe"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/lld-link"
     found: false
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\VCPackages"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\bin\\Roslyn"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\DiagnosticsHub\\Collector"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\\\MSBuild\\Current\\Bin\\amd64"
-        - "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\"
-        - "D:\\Microsoft VS Code"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -405,8 +284,6 @@ events:
         - "C:\\msys64\\ucrt64\\bin"
         - "C:\\Library\\SDL2"
         - "C:\\Library\\SDL2\\lib\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja"
   -
     kind: "find-v1"
     backtrace:
@@ -427,19 +304,7 @@ events:
     names:
       - "link"
     candidate_directories:
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/"
-      - "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/"
-      - "D:/Microsoft VS Code/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/SysWOW64/"
       - "C:/Windows/"
@@ -457,26 +322,11 @@ events:
       - "C:/msys64/ucrt64/bin/"
       - "C:/Library/SDL2/"
       - "C:/Library/SDL2/lib/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/"
     searched_directories:
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.com"
-    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\VCPackages"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\bin\\Roslyn"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\DiagnosticsHub\\Collector"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\\\MSBuild\\Current\\Bin\\amd64"
-        - "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\"
-        - "D:\\Microsoft VS Code"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -494,8 +344,6 @@ events:
         - "C:\\msys64\\ucrt64\\bin"
         - "C:\\Library\\SDL2"
         - "C:\\Library\\SDL2\\lib\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja"
   -
     kind: "find-v1"
     backtrace:
@@ -516,19 +364,7 @@ events:
     names:
       - "mt"
     candidate_directories:
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/"
-      - "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/"
-      - "D:/Microsoft VS Code/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/SysWOW64/"
       - "C:/Windows/"
@@ -546,44 +382,64 @@ events:
       - "C:/msys64/ucrt64/bin/"
       - "C:/Library/SDL2/"
       - "C:/Library/SDL2/lib/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/"
     searched_directories:
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/mt.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/mt.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/mt"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/mt.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/mt.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/mt"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/mt.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/mt.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/mt"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/mt.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/mt.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/mt"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/mt.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/mt.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/mt"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/mt.com"
-    found: "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/mt.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt"
+      - "C:/Windows/SysWOW64/mt.com"
+      - "C:/Windows/SysWOW64/mt.exe"
+      - "C:/Windows/SysWOW64/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/SysWOW64/wbem/mt.com"
+      - "C:/Windows/SysWOW64/wbem/mt.exe"
+      - "C:/Windows/SysWOW64/wbem/mt"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/SysWOW64/OpenSSH/mt.com"
+      - "C:/Windows/SysWOW64/OpenSSH/mt.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/mt"
+      - "D:/c/mingw64/bin/mt.com"
+      - "D:/c/mingw64/bin/mt.exe"
+      - "D:/c/mingw64/bin/mt"
+      - "D:/LSD/mt.com"
+      - "D:/LSD/mt.exe"
+      - "D:/LSD/mt"
+      - "C:/Program Files/Git/cmd/mt.com"
+      - "C:/Program Files/Git/cmd/mt.exe"
+      - "C:/Program Files/Git/cmd/mt"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/mt.com"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/mt.exe"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/mt"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/mt.com"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/mt.exe"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/mt"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/mt"
+      - "D:/Microsoft VS Code/bin/mt.com"
+      - "D:/Microsoft VS Code/bin/mt.exe"
+      - "D:/Microsoft VS Code/bin/mt"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/mt.com"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/mt.exe"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/mt"
+      - "C:/msys64/ucrt64/bin/mt.com"
+      - "C:/msys64/ucrt64/bin/mt.exe"
+      - "C:/msys64/ucrt64/bin/mt"
+      - "C:/Library/SDL2/mt.com"
+      - "C:/Library/SDL2/mt.exe"
+      - "C:/Library/SDL2/mt"
+      - "C:/Library/SDL2/lib/x64/mt.com"
+      - "C:/Library/SDL2/lib/x64/mt.exe"
+      - "C:/Library/SDL2/lib/x64/mt"
+    found: false
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\VCPackages"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\bin\\Roslyn"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\DiagnosticsHub\\Collector"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\\\MSBuild\\Current\\Bin\\amd64"
-        - "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\"
-        - "D:\\Microsoft VS Code"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -601,8 +457,6 @@ events:
         - "C:\\msys64\\ucrt64\\bin"
         - "C:\\Library\\SDL2"
         - "C:\\Library\\SDL2\\lib\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja"
   -
     kind: "find-v1"
     backtrace:
@@ -623,19 +477,7 @@ events:
     names:
       - "lib"
     candidate_directories:
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/"
-      - "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/"
-      - "D:/Microsoft VS Code/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/SysWOW64/"
       - "C:/Windows/"
@@ -653,26 +495,11 @@ events:
       - "C:/msys64/ucrt64/bin/"
       - "C:/Library/SDL2/"
       - "C:/Library/SDL2/lib/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/"
     searched_directories:
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lib.com"
-    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lib.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\VCPackages"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\bin\\Roslyn"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\DiagnosticsHub\\Collector"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\\\MSBuild\\Current\\Bin\\amd64"
-        - "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\"
-        - "D:\\Microsoft VS Code"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -690,8 +517,6 @@ events:
         - "C:\\msys64\\ucrt64\\bin"
         - "C:\\Library\\SDL2"
         - "C:\\Library\\SDL2\\lib\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja"
   -
     kind: "find-v1"
     backtrace:
@@ -719,19 +544,6 @@ events:
     found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\VCPackages"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\bin\\Roslyn"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\DiagnosticsHub\\Collector"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\\\MSBuild\\Current\\Bin\\amd64"
-        - "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\"
-        - "D:\\Microsoft VS Code"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -749,16 +561,6 @@ events:
         - "C:\\msys64\\ucrt64\\bin"
         - "C:\\Library\\SDL2"
         - "C:\\Library\\SDL2\\lib\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja"
-      ENV{INCLUDE}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\um"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\shared"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\winrt"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\cppwinrt"
   -
     kind: "message-v1"
     backtrace:
@@ -774,8 +576,8 @@ events:
       
       The output was:
       0
-      适用于 .NET Framework MSBuild 版本 17.14.14+a129329f1
-      生成启动时间为 12/5/2026 20:00:16。
+      适用于 .NET Framework MSBuild 版本 18.5.4+cb4e32d21
+      生成启动时间为 30/5/2026 7:16:12。
       
       节点 1 上的项目“C:\\SDLShooter\\build\\CMakeFiles\\4.2.3-msvc3\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)。
       PrepareForBuild:
@@ -786,15 +588,15 @@ events:
         正在创建“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
         正在对“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”执行 Touch 任务。
       ClCompile:
-        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
         CMakeCXXCompilerId.cpp
       Link:
-        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
         CompilerIdCXX.vcxproj -> C:\\SDLShooter\\build\\CMakeFiles\\4.2.3-msvc3\\CompilerIdCXX\\CompilerIdCXX.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
         :VCEnd
-        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
       FinalizeBuildStatus:
         正在删除文件“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”。
         正在对“Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate”执行 Touch 任务。
@@ -804,7 +606,7 @@ events:
           0 个警告
           0 个错误
       
-      已用时间 00:00:00.53
+      已用时间 00:00:00.52
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -836,19 +638,7 @@ events:
     names:
       - "lld-link"
     candidate_directories:
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/"
-      - "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/"
-      - "D:/Microsoft VS Code/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/SysWOW64/"
       - "C:/Windows/"
@@ -866,48 +656,10 @@ events:
       - "C:/msys64/ucrt64/bin/"
       - "C:/Library/SDL2/"
       - "C:/Library/SDL2/lib/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/"
     searched_directories:
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/lld-link"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/lld-link.com"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/lld-link.exe"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/lld-link"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/x64/lld-link.com"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/x64/lld-link.exe"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/x64/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/lld-link"
-      - "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/lld-link.com"
-      - "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/lld-link.exe"
-      - "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/lld-link"
-      - "D:/Microsoft VS Code/lld-link.com"
-      - "D:/Microsoft VS Code/lld-link.exe"
-      - "D:/Microsoft VS Code/lld-link"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.com"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.exe"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link"
@@ -959,28 +711,9 @@ events:
       - "C:/Library/SDL2/lib/x64/lld-link.com"
       - "C:/Library/SDL2/lib/x64/lld-link.exe"
       - "C:/Library/SDL2/lib/x64/lld-link"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/lld-link.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/lld-link.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/lld-link"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/lld-link.com"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/lld-link.exe"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/lld-link"
     found: false
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\VCPackages"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\bin\\Roslyn"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\DiagnosticsHub\\Collector"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\\\MSBuild\\Current\\Bin\\amd64"
-        - "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\"
-        - "D:\\Microsoft VS Code"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -998,8 +731,6 @@ events:
         - "C:\\msys64\\ucrt64\\bin"
         - "C:\\Library\\SDL2"
         - "C:\\Library\\SDL2\\lib\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja"
   -
     kind: "find-v1"
     backtrace:
@@ -1023,19 +754,6 @@ events:
     names:
       - "rc"
     candidate_directories:
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/"
-      - "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/"
-      - "D:/Microsoft VS Code/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/SysWOW64/"
       - "C:/Windows/"
@@ -1053,8 +771,6 @@ events:
       - "C:/msys64/ucrt64/bin/"
       - "C:/Library/SDL2/"
       - "C:/Library/SDL2/lib/x64/"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
@@ -1064,45 +780,100 @@ events:
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/"
-      - "C:/Program Files/SDLShooter/bin/"
-      - "C:/Program Files/SDLShooter/sbin/"
-      - "C:/Program Files/SDLShooter/"
+      - "C:/Program Files (x86)/SDLShooter/bin/"
+      - "C:/Program Files (x86)/SDLShooter/sbin/"
+      - "C:/Program Files (x86)/SDLShooter/"
     searched_directories:
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/rc.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/rc.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/rc"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/rc.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/rc.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/rc"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/rc.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/rc.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/rc"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/rc.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/rc.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/rc"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/rc.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/rc.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/rc"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/rc.com"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/rc.exe"
-      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/rc"
-      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/rc.com"
-    found: "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/rc.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc"
+      - "C:/Windows/SysWOW64/rc.com"
+      - "C:/Windows/SysWOW64/rc.exe"
+      - "C:/Windows/SysWOW64/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/SysWOW64/wbem/rc.com"
+      - "C:/Windows/SysWOW64/wbem/rc.exe"
+      - "C:/Windows/SysWOW64/wbem/rc"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/SysWOW64/OpenSSH/rc.com"
+      - "C:/Windows/SysWOW64/OpenSSH/rc.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/rc"
+      - "D:/c/mingw64/bin/rc.com"
+      - "D:/c/mingw64/bin/rc.exe"
+      - "D:/c/mingw64/bin/rc"
+      - "D:/LSD/rc.com"
+      - "D:/LSD/rc.exe"
+      - "D:/LSD/rc"
+      - "C:/Program Files/Git/cmd/rc.com"
+      - "C:/Program Files/Git/cmd/rc.exe"
+      - "C:/Program Files/Git/cmd/rc"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/rc.com"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/rc.exe"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/rc"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/rc.com"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/rc.exe"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/rc"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/rc"
+      - "D:/Microsoft VS Code/bin/rc.com"
+      - "D:/Microsoft VS Code/bin/rc.exe"
+      - "D:/Microsoft VS Code/bin/rc"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/rc.com"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/rc.exe"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/rc"
+      - "C:/msys64/ucrt64/bin/rc.com"
+      - "C:/msys64/ucrt64/bin/rc.exe"
+      - "C:/msys64/ucrt64/bin/rc"
+      - "C:/Library/SDL2/rc.com"
+      - "C:/Library/SDL2/rc.exe"
+      - "C:/Library/SDL2/rc"
+      - "C:/Library/SDL2/lib/x64/rc.com"
+      - "C:/Library/SDL2/lib/x64/rc.exe"
+      - "C:/Library/SDL2/lib/x64/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/rc.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/rc.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/rc"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/rc.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/rc.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/rc"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/rc.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/rc.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/rc"
+      - "C:/Program Files (x86)/SDLShooter/bin/rc.com"
+      - "C:/Program Files (x86)/SDLShooter/bin/rc.exe"
+      - "C:/Program Files (x86)/SDLShooter/bin/rc"
+      - "C:/Program Files (x86)/SDLShooter/sbin/rc.com"
+      - "C:/Program Files (x86)/SDLShooter/sbin/rc.exe"
+      - "C:/Program Files (x86)/SDLShooter/sbin/rc"
+      - "C:/Program Files (x86)/SDLShooter/rc.com"
+      - "C:/Program Files (x86)/SDLShooter/rc.exe"
+      - "C:/Program Files (x86)/SDLShooter/rc"
+    found: false
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\VCPackages"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\bin\\Roslyn"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\DiagnosticsHub\\Collector"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\\\MSBuild\\Current\\Bin\\amd64"
-        - "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\"
-        - "D:\\Microsoft VS Code"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -1120,14 +891,12 @@ events:
         - "C:\\msys64\\ucrt64\\bin"
         - "C:\\Library\\SDL2"
         - "C:\\Library\\SDL2\\lib\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files/SDLShooter"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/SDLShooter"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
         - "C:/Program Files (x86)"
         - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
-        - "C:/Program Files/SDLShooter"
+        - "C:/Program Files (x86)/SDLShooter"
   -
     kind: "try_compile-v1"
     backtrace:
@@ -1137,8 +906,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-cih4tx"
-      binary: "C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-cih4tx"
+      source: "C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-4fe5ql"
+      binary: "C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-4fe5ql"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -1147,39 +916,39 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-cih4tx'
+        Change Dir: 'C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-4fe5ql'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e7996.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        适用于 .NET Framework MSBuild 版本 17.14.14+a129329f1
-        生成启动时间为 12/5/2026 20:00:16。
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_5bd70.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        适用于 .NET Framework MSBuild 版本 18.5.4+cb4e32d21
+        生成启动时间为 30/5/2026 7:16:13。
         
-        节点 1 上的项目“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cih4tx\\cmTC_e7996.vcxproj”(默认目标)。
+        节点 1 上的项目“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4fe5ql\\cmTC_5bd70.vcxproj”(默认目标)。
         PrepareForBuild:
           已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
-          正在创建目录“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cih4tx\\Debug\\”。
-          正在创建目录“cmTC_e7996.dir\\Debug\\cmTC_e7996.tlog\\”。
+          正在创建目录“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4fe5ql\\Debug\\”。
+          正在创建目录“cmTC_5bd70.dir\\Debug\\cmTC_5bd70.tlog\\”。
         InitializeBuildStatus:
-          正在创建“cmTC_e7996.dir\\Debug\\cmTC_e7996.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
-          正在对“cmTC_e7996.dir\\Debug\\cmTC_e7996.tlog\\unsuccessfulbuild”执行 Touch 任务。
+          正在创建“cmTC_5bd70.dir\\Debug\\cmTC_5bd70.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在对“cmTC_5bd70.dir\\Debug\\cmTC_5bd70.tlog\\unsuccessfulbuild”执行 Touch 任务。
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_e7996.dir\\Debug\\\\" /Fd"cmTC_e7996.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
-          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.44.35213 版
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_5bd70.dir\\Debug\\\\" /Fd"cmTC_5bd70.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.50.35729 版
           版权所有(C) Microsoft Corporation。保留所有权利。
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_e7996.dir\\Debug\\\\" /Fd"cmTC_e7996.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_5bd70.dir\\Debug\\\\" /Fd"cmTC_5bd70.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cih4tx\\Debug\\cmTC_e7996.exe" /INCREMENTAL /ILK:"cmTC_e7996.dir\\Debug\\cmTC_e7996.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-cih4tx/Debug/cmTC_e7996.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-cih4tx/Debug/cmTC_e7996.lib" /MACHINE:X64  /machine:x64 cmTC_e7996.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_e7996.vcxproj -> C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cih4tx\\Debug\\cmTC_e7996.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4fe5ql\\Debug\\cmTC_5bd70.exe" /INCREMENTAL /ILK:"cmTC_5bd70.dir\\Debug\\cmTC_5bd70.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-4fe5ql/Debug/cmTC_5bd70.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-4fe5ql/Debug/cmTC_5bd70.lib" /MACHINE:X64  /machine:x64 cmTC_5bd70.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_5bd70.vcxproj -> C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4fe5ql\\Debug\\cmTC_5bd70.exe
         FinalizeBuildStatus:
-          正在删除文件“cmTC_e7996.dir\\Debug\\cmTC_e7996.tlog\\unsuccessfulbuild”。
-          正在对“cmTC_e7996.dir\\Debug\\cmTC_e7996.tlog\\cmTC_e7996.lastbuildstate”执行 Touch 任务。
-        已完成生成项目“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cih4tx\\cmTC_e7996.vcxproj”(默认目标)的操作。
+          正在删除文件“cmTC_5bd70.dir\\Debug\\cmTC_5bd70.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_5bd70.dir\\Debug\\cmTC_5bd70.tlog\\cmTC_5bd70.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4fe5ql\\cmTC_5bd70.vcxproj”(默认目标)的操作。
         
         已成功生成。
             0 个警告
             0 个错误
         
-        已用时间 00:00:00.52
+        已用时间 00:00:00.48
         
       exitCode: 0
   -
@@ -1192,7 +961,7 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe
+        linker tool for 'C': C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -1207,8 +976,8 @@ events:
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:3 (project)"
     message: |
-      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.44.35213.0
+      Running the C compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35729.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
   -
     kind: "try_compile-v1"
@@ -1219,8 +988,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-233sge"
-      binary: "C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-233sge"
+      source: "C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-1tssq6"
+      binary: "C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-1tssq6"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -1230,39 +999,39 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-233sge'
+        Change Dir: 'C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-1tssq6'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2877e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        适用于 .NET Framework MSBuild 版本 17.14.14+a129329f1
-        生成启动时间为 12/5/2026 20:00:17。
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b9619.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        适用于 .NET Framework MSBuild 版本 18.5.4+cb4e32d21
+        生成启动时间为 30/5/2026 7:16:14。
         
-        节点 1 上的项目“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-233sge\\cmTC_2877e.vcxproj”(默认目标)。
+        节点 1 上的项目“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1tssq6\\cmTC_b9619.vcxproj”(默认目标)。
         PrepareForBuild:
           已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
-          正在创建目录“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-233sge\\Debug\\”。
-          正在创建目录“cmTC_2877e.dir\\Debug\\cmTC_2877e.tlog\\”。
+          正在创建目录“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1tssq6\\Debug\\”。
+          正在创建目录“cmTC_b9619.dir\\Debug\\cmTC_b9619.tlog\\”。
         InitializeBuildStatus:
-          正在创建“cmTC_2877e.dir\\Debug\\cmTC_2877e.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
-          正在对“cmTC_2877e.dir\\Debug\\cmTC_2877e.tlog\\unsuccessfulbuild”执行 Touch 任务。
+          正在创建“cmTC_b9619.dir\\Debug\\cmTC_b9619.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在对“cmTC_b9619.dir\\Debug\\cmTC_b9619.tlog\\unsuccessfulbuild”执行 Touch 任务。
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_2877e.dir\\Debug\\\\" /Fd"cmTC_2877e.dir\\Debug\\vc143.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
-          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.44.35213 版
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_b9619.dir\\Debug\\\\" /Fd"cmTC_b9619.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.50.35729 版
           版权所有(C) Microsoft Corporation。保留所有权利。
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_2877e.dir\\Debug\\\\" /Fd"cmTC_2877e.dir\\Debug\\vc143.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_b9619.dir\\Debug\\\\" /Fd"cmTC_b9619.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-233sge\\Debug\\cmTC_2877e.exe" /INCREMENTAL /ILK:"cmTC_2877e.dir\\Debug\\cmTC_2877e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-233sge/Debug/cmTC_2877e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-233sge/Debug/cmTC_2877e.lib" /MACHINE:X64  /machine:x64 cmTC_2877e.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_2877e.vcxproj -> C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-233sge\\Debug\\cmTC_2877e.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1tssq6\\Debug\\cmTC_b9619.exe" /INCREMENTAL /ILK:"cmTC_b9619.dir\\Debug\\cmTC_b9619.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-1tssq6/Debug/cmTC_b9619.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-1tssq6/Debug/cmTC_b9619.lib" /MACHINE:X64  /machine:x64 cmTC_b9619.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_b9619.vcxproj -> C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1tssq6\\Debug\\cmTC_b9619.exe
         FinalizeBuildStatus:
-          正在删除文件“cmTC_2877e.dir\\Debug\\cmTC_2877e.tlog\\unsuccessfulbuild”。
-          正在对“cmTC_2877e.dir\\Debug\\cmTC_2877e.tlog\\cmTC_2877e.lastbuildstate”执行 Touch 任务。
-        已完成生成项目“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-233sge\\cmTC_2877e.vcxproj”(默认目标)的操作。
+          正在删除文件“cmTC_b9619.dir\\Debug\\cmTC_b9619.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_b9619.dir\\Debug\\cmTC_b9619.tlog\\cmTC_b9619.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1tssq6\\cmTC_b9619.vcxproj”(默认目标)的操作。
         
         已成功生成。
             0 个警告
             0 个错误
         
-        已用时间 00:00:00.49
+        已用时间 00:00:00.57
         
       exitCode: 0
   -
@@ -1275,7 +1044,7 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe
+        linker tool for 'CXX': C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -1290,8 +1059,8 @@ events:
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:3 (project)"
     message: |
-      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.44.35213.0
+      Running the CXX compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35729.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
   -
     kind: "find_package-v1"
@@ -1346,19 +1115,6 @@ events:
       version: "2.32.10"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\VCPackages"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\bin\\Roslyn"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\DiagnosticsHub\\Collector"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\\\MSBuild\\Current\\Bin\\amd64"
-        - "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\"
-        - "D:\\Microsoft VS Code"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -1376,14 +1132,12 @@ events:
         - "C:\\msys64\\ucrt64\\bin"
         - "C:\\Library\\SDL2"
         - "C:\\Library\\SDL2\\lib\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files/SDLShooter"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/SDLShooter"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
         - "C:/Program Files (x86)"
         - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
-        - "C:/Program Files/SDLShooter"
+        - "C:/Program Files (x86)/SDLShooter"
   -
     kind: "find_package-v1"
     backtrace:
@@ -1425,110 +1179,6 @@ events:
         reason: "no_exist"
       -
         path: "C:/SDLShooter/build/CMakeFiles/pkgRedirects/sdl2_image-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/SDL2_imageConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/sdl2_image-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/SDL2_imageConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/sdl2_image-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/SDL2_imageConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/sdl2_image-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/SDL2_imageConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/sdl2_image-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/SDL2_imageConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/sdl2_image-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/SDL2_imageConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/sdl2_image-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/SDL2_imageConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/sdl2_image-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/Windows Kits/10/bin/x64/SDL2_imageConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/Windows Kits/10/bin/x64/sdl2_image-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/SDL2_imageConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/sdl2_image-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/SDL2_imageConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/sdl2_image-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/SDL2_imageConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/sdl2_image-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/SDL2_imageConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/sdl2_image-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "D:/Microsoft VS Code/SDL2_imageConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "D:/Microsoft VS Code/sdl2_image-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
@@ -1604,6 +1254,14 @@ events:
         mode: "config"
         reason: "no_exist"
       -
+        path: "D:/Microsoft VS Code/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
         path: "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/SDL2_imageConfig.cmake"
         mode: "config"
         reason: "no_exist"
@@ -1637,19 +1295,6 @@ events:
       version: "2.8.10"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\VCPackages"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\bin\\Roslyn"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\DiagnosticsHub\\Collector"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\\\MSBuild\\Current\\Bin\\amd64"
-        - "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\"
-        - "D:\\Microsoft VS Code"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -1667,14 +1312,12 @@ events:
         - "C:\\msys64\\ucrt64\\bin"
         - "C:\\Library\\SDL2"
         - "C:\\Library\\SDL2\\lib\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files/SDLShooter"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/SDLShooter"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
         - "C:/Program Files (x86)"
         - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
-        - "C:/Program Files/SDLShooter"
+        - "C:/Program Files (x86)/SDLShooter"
   -
     kind: "find_package-v1"
     backtrace:
@@ -1716,110 +1359,6 @@ events:
         reason: "no_exist"
       -
         path: "C:/SDLShooter/build/CMakeFiles/pkgRedirects/sdl2_mixer-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/SDL2_mixerConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/sdl2_mixer-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/SDL2_mixerConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/sdl2_mixer-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/SDL2_mixerConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/sdl2_mixer-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/SDL2_mixerConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/sdl2_mixer-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/SDL2_mixerConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/sdl2_mixer-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/SDL2_mixerConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/sdl2_mixer-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/SDL2_mixerConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/sdl2_mixer-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/Windows Kits/10/bin/x64/SDL2_mixerConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/Windows Kits/10/bin/x64/sdl2_mixer-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/SDL2_mixerConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/sdl2_mixer-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/SDL2_mixerConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/sdl2_mixer-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/SDL2_mixerConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/sdl2_mixer-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/SDL2_mixerConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/sdl2_mixer-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "D:/Microsoft VS Code/SDL2_mixerConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "D:/Microsoft VS Code/sdl2_mixer-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
@@ -1895,6 +1434,14 @@ events:
         mode: "config"
         reason: "no_exist"
       -
+        path: "D:/Microsoft VS Code/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
         path: "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/SDL2_mixerConfig.cmake"
         mode: "config"
         reason: "no_exist"
@@ -1928,19 +1475,6 @@ events:
       version: "2.8.1"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\VCPackages"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\bin\\Roslyn"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\DiagnosticsHub\\Collector"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\\\MSBuild\\Current\\Bin\\amd64"
-        - "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\"
-        - "D:\\Microsoft VS Code"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -1958,14 +1492,12 @@ events:
         - "C:\\msys64\\ucrt64\\bin"
         - "C:\\Library\\SDL2"
         - "C:\\Library\\SDL2\\lib\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files/SDLShooter"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/SDLShooter"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
         - "C:/Program Files (x86)"
         - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
-        - "C:/Program Files/SDLShooter"
+        - "C:/Program Files (x86)/SDLShooter"
   -
     kind: "find_package-v1"
     backtrace:
@@ -2007,110 +1539,6 @@ events:
         reason: "no_exist"
       -
         path: "C:/SDLShooter/build/CMakeFiles/pkgRedirects/sdl2_ttf-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/SDL2_ttfConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/sdl2_ttf-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/SDL2_ttfConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/vcpackages/sdl2_ttf-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/SDL2_ttfConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow/sdl2_ttf-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/SDL2_ttfConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/sdl2_ttf-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/SDL2_ttfConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/sdl2_ttf-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/SDL2_ttfConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector/sdl2_ttf-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/SDL2_ttfConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/sdl2_ttf-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/Windows Kits/10/bin/x64/SDL2_ttfConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/Windows Kits/10/bin/x64/sdl2_ttf-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/SDL2_ttfConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/sdl2_ttf-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/SDL2_ttfConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/sdl2_ttf-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/SDL2_ttfConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/sdl2_ttf-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/SDL2_ttfConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/sdl2_ttf-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "D:/Microsoft VS Code/SDL2_ttfConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "D:/Microsoft VS Code/sdl2_ttf-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
@@ -2186,6 +1614,14 @@ events:
         mode: "config"
         reason: "no_exist"
       -
+        path: "D:/Microsoft VS Code/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
         path: "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/SDL2_ttfConfig.cmake"
         mode: "config"
         reason: "no_exist"
@@ -2219,19 +1655,6 @@ events:
       version: "2.24.0"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\VCPackages"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\bin\\Roslyn"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\DiagnosticsHub\\Collector"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\\\MSBuild\\Current\\Bin\\amd64"
-        - "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\"
-        - "D:\\Microsoft VS Code"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -2249,12 +1672,1691 @@ events:
         - "C:\\msys64\\ucrt64\\bin"
         - "C:\\Library\\SDL2"
         - "C:\\Library\\SDL2\\lib\\x64"
-        - "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files/SDLShooter"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/SDLShooter"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
         - "C:/Program Files (x86)"
         - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
-        - "C:/Program Files/SDLShooter"
+        - "C:/Program Files (x86)/SDLShooter"
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "D:\\c\\mingw64\\bin"
+        - "D:\\LSD\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\Scripts\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MySQL\\MySQL Server 5.7"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Library\\SDL2"
+        - "C:\\Library\\SDL2\\lib\\x64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      适用于 .NET Framework MSBuild 版本 18.5.4+cb4e32d21
+      生成启动时间为 30/5/2026 7:16:32。
+      
+      节点 1 上的项目“C:\\SDLShooter\\build\\CMakeFiles\\4.2.3-msvc3\\CompilerIdC\\CompilerIdC.vcxproj”(默认目标)。
+      PrepareForBuild:
+        正在创建目录“Debug\\”。
+        已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
+        正在创建目录“Debug\\CompilerIdC.tlog\\”。
+      InitializeBuildStatus:
+        正在创建“Debug\\CompilerIdC.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        正在对“Debug\\CompilerIdC.tlog\\unsuccessfulbuild”执行 Touch 任务。
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\SDLShooter\\build\\CMakeFiles\\4.2.3-msvc3\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        正在删除文件“Debug\\CompilerIdC.tlog\\unsuccessfulbuild”。
+        正在对“Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate”执行 Touch 任务。
+      已完成生成项目“C:\\SDLShooter\\build\\CMakeFiles\\4.2.3-msvc3\\CompilerIdC\\CompilerIdC.vcxproj”(默认目标)的操作。
+      
+      已成功生成。
+          0 个警告
+          0 个错误
+      
+      已用时间 00:00:00.53
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/SDLShooter/build/CMakeFiles/4.2.3-msvc3/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "D:/c/mingw64/bin/"
+      - "D:/LSD/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Library/SDL2/"
+      - "C:/Library/SDL2/lib/x64/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "D:\\c\\mingw64\\bin"
+        - "D:\\LSD\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\Scripts\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MySQL\\MySQL Server 5.7"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Library\\SDL2"
+        - "C:\\Library\\SDL2\\lib\\x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "D:/c/mingw64/bin/"
+      - "D:/LSD/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Library/SDL2/"
+      - "C:/Library/SDL2/lib/x64/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link"
+      - "C:/Windows/SysWOW64/lld-link.com"
+      - "C:/Windows/SysWOW64/lld-link.exe"
+      - "C:/Windows/SysWOW64/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/SysWOW64/wbem/lld-link.com"
+      - "C:/Windows/SysWOW64/wbem/lld-link.exe"
+      - "C:/Windows/SysWOW64/wbem/lld-link"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link.com"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link"
+      - "D:/c/mingw64/bin/lld-link.com"
+      - "D:/c/mingw64/bin/lld-link.exe"
+      - "D:/c/mingw64/bin/lld-link"
+      - "D:/LSD/lld-link.com"
+      - "D:/LSD/lld-link.exe"
+      - "D:/LSD/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/lld-link.com"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/lld-link.exe"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/lld-link"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/lld-link.com"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/lld-link.exe"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/lld-link"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "D:/Microsoft VS Code/bin/lld-link.com"
+      - "D:/Microsoft VS Code/bin/lld-link.exe"
+      - "D:/Microsoft VS Code/bin/lld-link"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/lld-link.com"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/lld-link.exe"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/lld-link"
+      - "C:/msys64/ucrt64/bin/lld-link.com"
+      - "C:/msys64/ucrt64/bin/lld-link.exe"
+      - "C:/msys64/ucrt64/bin/lld-link"
+      - "C:/Library/SDL2/lld-link.com"
+      - "C:/Library/SDL2/lld-link.exe"
+      - "C:/Library/SDL2/lld-link"
+      - "C:/Library/SDL2/lib/x64/lld-link.com"
+      - "C:/Library/SDL2/lib/x64/lld-link.exe"
+      - "C:/Library/SDL2/lib/x64/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "D:\\c\\mingw64\\bin"
+        - "D:\\LSD\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\Scripts\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MySQL\\MySQL Server 5.7"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Library\\SDL2"
+        - "C:\\Library\\SDL2\\lib\\x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "D:/c/mingw64/bin/"
+      - "D:/LSD/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Library/SDL2/"
+      - "C:/Library/SDL2/lib/x64/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "D:\\c\\mingw64\\bin"
+        - "D:\\LSD\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\Scripts\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MySQL\\MySQL Server 5.7"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Library\\SDL2"
+        - "C:\\Library\\SDL2\\lib\\x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "D:/c/mingw64/bin/"
+      - "D:/LSD/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Library/SDL2/"
+      - "C:/Library/SDL2/lib/x64/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt"
+      - "C:/Windows/SysWOW64/mt.com"
+      - "C:/Windows/SysWOW64/mt.exe"
+      - "C:/Windows/SysWOW64/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/SysWOW64/wbem/mt.com"
+      - "C:/Windows/SysWOW64/wbem/mt.exe"
+      - "C:/Windows/SysWOW64/wbem/mt"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/SysWOW64/OpenSSH/mt.com"
+      - "C:/Windows/SysWOW64/OpenSSH/mt.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/mt"
+      - "D:/c/mingw64/bin/mt.com"
+      - "D:/c/mingw64/bin/mt.exe"
+      - "D:/c/mingw64/bin/mt"
+      - "D:/LSD/mt.com"
+      - "D:/LSD/mt.exe"
+      - "D:/LSD/mt"
+      - "C:/Program Files/Git/cmd/mt.com"
+      - "C:/Program Files/Git/cmd/mt.exe"
+      - "C:/Program Files/Git/cmd/mt"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/mt.com"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/mt.exe"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/mt"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/mt.com"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/mt.exe"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/mt"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/mt"
+      - "D:/Microsoft VS Code/bin/mt.com"
+      - "D:/Microsoft VS Code/bin/mt.exe"
+      - "D:/Microsoft VS Code/bin/mt"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/mt.com"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/mt.exe"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/mt"
+      - "C:/msys64/ucrt64/bin/mt.com"
+      - "C:/msys64/ucrt64/bin/mt.exe"
+      - "C:/msys64/ucrt64/bin/mt"
+      - "C:/Library/SDL2/mt.com"
+      - "C:/Library/SDL2/mt.exe"
+      - "C:/Library/SDL2/mt"
+      - "C:/Library/SDL2/lib/x64/mt.com"
+      - "C:/Library/SDL2/lib/x64/mt.exe"
+      - "C:/Library/SDL2/lib/x64/mt"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "D:\\c\\mingw64\\bin"
+        - "D:\\LSD\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\Scripts\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MySQL\\MySQL Server 5.7"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Library\\SDL2"
+        - "C:\\Library\\SDL2\\lib\\x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "D:/c/mingw64/bin/"
+      - "D:/LSD/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Library/SDL2/"
+      - "C:/Library/SDL2/lib/x64/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "D:\\c\\mingw64\\bin"
+        - "D:\\LSD\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\Scripts\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MySQL\\MySQL Server 5.7"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Library\\SDL2"
+        - "C:\\Library\\SDL2\\lib\\x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "D:\\c\\mingw64\\bin"
+        - "D:\\LSD\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\Scripts\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MySQL\\MySQL Server 5.7"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Library\\SDL2"
+        - "C:\\Library\\SDL2\\lib\\x64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      适用于 .NET Framework MSBuild 版本 18.5.4+cb4e32d21
+      生成启动时间为 30/5/2026 7:16:33。
+      
+      节点 1 上的项目“C:\\SDLShooter\\build\\CMakeFiles\\4.2.3-msvc3\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)。
+      PrepareForBuild:
+        正在创建目录“Debug\\”。
+        已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
+        正在创建目录“Debug\\CompilerIdCXX.tlog\\”。
+      InitializeBuildStatus:
+        正在创建“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        正在对“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”执行 Touch 任务。
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\SDLShooter\\build\\CMakeFiles\\4.2.3-msvc3\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        正在删除文件“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”。
+        正在对“Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate”执行 Touch 任务。
+      已完成生成项目“C:\\SDLShooter\\build\\CMakeFiles\\4.2.3-msvc3\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)的操作。
+      
+      已成功生成。
+          0 个警告
+          0 个错误
+      
+      已用时间 00:00:00.54
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/SDLShooter/build/CMakeFiles/4.2.3-msvc3/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "D:/c/mingw64/bin/"
+      - "D:/LSD/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Library/SDL2/"
+      - "C:/Library/SDL2/lib/x64/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link"
+      - "C:/Windows/SysWOW64/lld-link.com"
+      - "C:/Windows/SysWOW64/lld-link.exe"
+      - "C:/Windows/SysWOW64/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/SysWOW64/wbem/lld-link.com"
+      - "C:/Windows/SysWOW64/wbem/lld-link.exe"
+      - "C:/Windows/SysWOW64/wbem/lld-link"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link.com"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link"
+      - "D:/c/mingw64/bin/lld-link.com"
+      - "D:/c/mingw64/bin/lld-link.exe"
+      - "D:/c/mingw64/bin/lld-link"
+      - "D:/LSD/lld-link.com"
+      - "D:/LSD/lld-link.exe"
+      - "D:/LSD/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/lld-link.com"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/lld-link.exe"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/lld-link"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/lld-link.com"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/lld-link.exe"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/lld-link"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "D:/Microsoft VS Code/bin/lld-link.com"
+      - "D:/Microsoft VS Code/bin/lld-link.exe"
+      - "D:/Microsoft VS Code/bin/lld-link"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/lld-link.com"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/lld-link.exe"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/lld-link"
+      - "C:/msys64/ucrt64/bin/lld-link.com"
+      - "C:/msys64/ucrt64/bin/lld-link.exe"
+      - "C:/msys64/ucrt64/bin/lld-link"
+      - "C:/Library/SDL2/lld-link.com"
+      - "C:/Library/SDL2/lld-link.exe"
+      - "C:/Library/SDL2/lld-link"
+      - "C:/Library/SDL2/lib/x64/lld-link.com"
+      - "C:/Library/SDL2/lib/x64/lld-link.exe"
+      - "C:/Library/SDL2/lib/x64/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "D:\\c\\mingw64\\bin"
+        - "D:\\LSD\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\Scripts\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MySQL\\MySQL Server 5.7"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Library\\SDL2"
+        - "C:\\Library\\SDL2\\lib\\x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC.cmake:584 (enable_language)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC.cmake:557 (__windows_compiler_msvc_enable_rc)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeCInformation.cmake:48 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "D:/c/mingw64/bin/"
+      - "D:/LSD/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Library/SDL2/"
+      - "C:/Library/SDL2/lib/x64/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/"
+      - "C:/Program Files (x86)/SDLShooter/bin/"
+      - "C:/Program Files (x86)/SDLShooter/sbin/"
+      - "C:/Program Files (x86)/SDLShooter/"
+    searched_directories:
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc"
+      - "C:/Windows/SysWOW64/rc.com"
+      - "C:/Windows/SysWOW64/rc.exe"
+      - "C:/Windows/SysWOW64/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/SysWOW64/wbem/rc.com"
+      - "C:/Windows/SysWOW64/wbem/rc.exe"
+      - "C:/Windows/SysWOW64/wbem/rc"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/SysWOW64/OpenSSH/rc.com"
+      - "C:/Windows/SysWOW64/OpenSSH/rc.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/rc"
+      - "D:/c/mingw64/bin/rc.com"
+      - "D:/c/mingw64/bin/rc.exe"
+      - "D:/c/mingw64/bin/rc"
+      - "D:/LSD/rc.com"
+      - "D:/LSD/rc.exe"
+      - "D:/LSD/rc"
+      - "C:/Program Files/Git/cmd/rc.com"
+      - "C:/Program Files/Git/cmd/rc.exe"
+      - "C:/Program Files/Git/cmd/rc"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/rc.com"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/rc.exe"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/rc"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/rc.com"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/rc.exe"
+      - "C:/Users/10851/AppData/Local/Programs/Python/Python37/rc"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/rc"
+      - "D:/Microsoft VS Code/bin/rc.com"
+      - "D:/Microsoft VS Code/bin/rc.exe"
+      - "D:/Microsoft VS Code/bin/rc"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/rc.com"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/rc.exe"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/rc"
+      - "C:/msys64/ucrt64/bin/rc.com"
+      - "C:/msys64/ucrt64/bin/rc.exe"
+      - "C:/msys64/ucrt64/bin/rc"
+      - "C:/Library/SDL2/rc.com"
+      - "C:/Library/SDL2/rc.exe"
+      - "C:/Library/SDL2/rc"
+      - "C:/Library/SDL2/lib/x64/rc.com"
+      - "C:/Library/SDL2/lib/x64/rc.exe"
+      - "C:/Library/SDL2/lib/x64/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/rc.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/rc.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/rc"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/rc.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/rc.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/rc"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/rc.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/rc.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/rc"
+      - "C:/Program Files (x86)/SDLShooter/bin/rc.com"
+      - "C:/Program Files (x86)/SDLShooter/bin/rc.exe"
+      - "C:/Program Files (x86)/SDLShooter/bin/rc"
+      - "C:/Program Files (x86)/SDLShooter/sbin/rc.com"
+      - "C:/Program Files (x86)/SDLShooter/sbin/rc.exe"
+      - "C:/Program Files (x86)/SDLShooter/sbin/rc"
+      - "C:/Program Files (x86)/SDLShooter/rc.com"
+      - "C:/Program Files (x86)/SDLShooter/rc.exe"
+      - "C:/Program Files (x86)/SDLShooter/rc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "D:\\c\\mingw64\\bin"
+        - "D:\\LSD\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\Scripts\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MySQL\\MySQL Server 5.7"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Library\\SDL2"
+        - "C:\\Library\\SDL2\\lib\\x64"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/SDLShooter"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
+        - "C:/Program Files (x86)/SDLShooter"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-76xnv2"
+      binary: "C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-76xnv2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-76xnv2'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_7ae08.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        适用于 .NET Framework MSBuild 版本 18.5.4+cb4e32d21
+        生成启动时间为 30/5/2026 7:16:34。
+        
+        节点 1 上的项目“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-76xnv2\\cmTC_7ae08.vcxproj”(默认目标)。
+        PrepareForBuild:
+          已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
+          正在创建目录“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-76xnv2\\Debug\\”。
+          正在创建目录“cmTC_7ae08.dir\\Debug\\cmTC_7ae08.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_7ae08.dir\\Debug\\cmTC_7ae08.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在对“cmTC_7ae08.dir\\Debug\\cmTC_7ae08.tlog\\unsuccessfulbuild”执行 Touch 任务。
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_7ae08.dir\\Debug\\\\" /Fd"cmTC_7ae08.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.50.35729 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_7ae08.dir\\Debug\\\\" /Fd"cmTC_7ae08.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-76xnv2\\Debug\\cmTC_7ae08.exe" /INCREMENTAL /ILK:"cmTC_7ae08.dir\\Debug\\cmTC_7ae08.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-76xnv2/Debug/cmTC_7ae08.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-76xnv2/Debug/cmTC_7ae08.lib" /MACHINE:X64  /machine:x64 cmTC_7ae08.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_7ae08.vcxproj -> C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-76xnv2\\Debug\\cmTC_7ae08.exe
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_7ae08.dir\\Debug\\cmTC_7ae08.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_7ae08.dir\\Debug\\cmTC_7ae08.tlog\\cmTC_7ae08.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-76xnv2\\cmTC_7ae08.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.51
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35729.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-kuo43b"
+      binary: "C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-kuo43b"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-kuo43b'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_40751.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        适用于 .NET Framework MSBuild 版本 18.5.4+cb4e32d21
+        生成启动时间为 30/5/2026 7:16:35。
+        
+        节点 1 上的项目“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kuo43b\\cmTC_40751.vcxproj”(默认目标)。
+        PrepareForBuild:
+          已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
+          正在创建目录“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kuo43b\\Debug\\”。
+          正在创建目录“cmTC_40751.dir\\Debug\\cmTC_40751.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_40751.dir\\Debug\\cmTC_40751.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在对“cmTC_40751.dir\\Debug\\cmTC_40751.tlog\\unsuccessfulbuild”执行 Touch 任务。
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_40751.dir\\Debug\\\\" /Fd"cmTC_40751.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.50.35729 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_40751.dir\\Debug\\\\" /Fd"cmTC_40751.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kuo43b\\Debug\\cmTC_40751.exe" /INCREMENTAL /ILK:"cmTC_40751.dir\\Debug\\cmTC_40751.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-kuo43b/Debug/cmTC_40751.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/SDLShooter/build/CMakeFiles/CMakeScratch/TryCompile-kuo43b/Debug/cmTC_40751.lib" /MACHINE:X64  /machine:x64 cmTC_40751.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_40751.vcxproj -> C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kuo43b\\Debug\\cmTC_40751.exe
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_40751.dir\\Debug\\cmTC_40751.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_40751.dir\\Debug\\cmTC_40751.tlog\\cmTC_40751.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“C:\\SDLShooter\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kuo43b\\cmTC_40751.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.51
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35729.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:23 (find_package)"
+    name: "SDL2"
+    configs:
+      -
+        filename: "SDL2Config.cmake"
+        kind: "cmake"
+      -
+        filename: "sdl2-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "SDL2"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "C:/SDLShooter/build/CMakeFiles/pkgRedirects/SDL2Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/SDLShooter/build/CMakeFiles/pkgRedirects/sdl2-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Library/SDL2/cmake/SDL2Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/Library/SDL2/cmake/sdl2-config.cmake"
+      mode: "config"
+      version: "2.32.10"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "D:\\c\\mingw64\\bin"
+        - "D:\\LSD\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\Scripts\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MySQL\\MySQL Server 5.7"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Library\\SDL2"
+        - "C:\\Library\\SDL2\\lib\\x64"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/SDLShooter"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
+        - "C:/Program Files (x86)/SDLShooter"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:24 (find_package)"
+    name: "SDL2_image"
+    configs:
+      -
+        filename: "SDL2_imageConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "sdl2_image-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "SDL2_image"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "C:/SDLShooter/build/CMakeFiles/pkgRedirects/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/SDLShooter/build/CMakeFiles/pkgRedirects/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/VMware/VMware Workstation/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/VMware/VMware Workstation/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/wbem/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/wbem/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Programs/Python/Python37/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Programs/Python/Python37/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Library/SDL2/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Library/SDL2/sdl2_image-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Library/SDL2/cmake/SDL2_imageConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/Library/SDL2/cmake/sdl2_image-config.cmake"
+      mode: "config"
+      version: "2.8.10"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "D:\\c\\mingw64\\bin"
+        - "D:\\LSD\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\Scripts\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MySQL\\MySQL Server 5.7"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Library\\SDL2"
+        - "C:\\Library\\SDL2\\lib\\x64"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/SDLShooter"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
+        - "C:/Program Files (x86)/SDLShooter"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:25 (find_package)"
+    name: "SDL2_mixer"
+    configs:
+      -
+        filename: "SDL2_mixerConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "sdl2_mixer-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "SDL2_mixer"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "C:/SDLShooter/build/CMakeFiles/pkgRedirects/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/SDLShooter/build/CMakeFiles/pkgRedirects/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/VMware/VMware Workstation/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/VMware/VMware Workstation/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/wbem/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/wbem/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Programs/Python/Python37/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Programs/Python/Python37/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Library/SDL2/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Library/SDL2/sdl2_mixer-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Library/SDL2/cmake/SDL2_mixerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/Library/SDL2/cmake/sdl2_mixer-config.cmake"
+      mode: "config"
+      version: "2.8.1"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "D:\\c\\mingw64\\bin"
+        - "D:\\LSD\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\Scripts\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MySQL\\MySQL Server 5.7"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Library\\SDL2"
+        - "C:\\Library\\SDL2\\lib\\x64"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/SDLShooter"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
+        - "C:/Program Files (x86)/SDLShooter"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:26 (find_package)"
+    name: "SDL2_ttf"
+    configs:
+      -
+        filename: "SDL2_ttfConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "sdl2_ttf-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "SDL2_ttf"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "C:/SDLShooter/build/CMakeFiles/pkgRedirects/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/SDLShooter/build/CMakeFiles/pkgRedirects/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/VMware/VMware Workstation/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/VMware/VMware Workstation/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/wbem/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/wbem/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Programs/Python/Python37/Scripts/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Programs/Python/Python37/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Programs/Python/Python37/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/10851/AppData/Local/Microsoft/WindowsApps/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/MySQL/MySQL Server 5.7/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Library/SDL2/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Library/SDL2/sdl2_ttf-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Library/SDL2/cmake/SDL2_ttfConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/Library/SDL2/cmake/sdl2_ttf-config.cmake"
+      mode: "config"
+      version: "2.24.0"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "D:\\c\\mingw64\\bin"
+        - "D:\\LSD\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\Scripts\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Programs\\Python\\Python37\\"
+        - "C:\\Users\\10851\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MySQL\\MySQL Server 5.7"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Library\\SDL2"
+        - "C:\\Library\\SDL2\\lib\\x64"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/SDLShooter"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
+        - "C:/Program Files (x86)/SDLShooter"
 ...

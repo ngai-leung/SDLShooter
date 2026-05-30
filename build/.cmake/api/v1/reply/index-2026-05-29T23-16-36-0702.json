@@ -4,7 +4,7 @@
 		"generator" : 
 		{
 			"multiConfig" : true,
-			"name" : "Visual Studio 17 2022",
+			"name" : "Visual Studio 18 2026",
 			"platform" : "x64"
 		},
 		"paths" : 
@@ -36,7 +36,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-fea0eb5e899e2fff72af.json",
+			"jsonFile" : "cache-v2-afad09d636d53ada038a.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -45,7 +45,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cmakeFiles-v1-4ae307d6d72e9c24a8f9.json",
+			"jsonFile" : "cmakeFiles-v1-f824f73cc5a17441643e.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
@@ -54,7 +54,7 @@
 			}
 		},
 		{
-			"jsonFile" : "toolchains-v1-b541f12d01c5bd6ae3e4.json",
+			"jsonFile" : "toolchains-v1-80363f7f7350f25120bb.json",
 			"kind" : "toolchains",
 			"version" : 
 			{
@@ -91,7 +91,7 @@
 				"responses" : 
 				[
 					{
-						"jsonFile" : "cache-v2-fea0eb5e899e2fff72af.json",
+						"jsonFile" : "cache-v2-afad09d636d53ada038a.json",
 						"kind" : "cache",
 						"version" : 
 						{
@@ -109,7 +109,7 @@
 						}
 					},
 					{
-						"jsonFile" : "toolchains-v1-b541f12d01c5bd6ae3e4.json",
+						"jsonFile" : "toolchains-v1-80363f7f7350f25120bb.json",
 						"kind" : "toolchains",
 						"version" : 
 						{
@@ -118,7 +118,7 @@
 						}
 					},
 					{
-						"jsonFile" : "cmakeFiles-v1-4ae307d6d72e9c24a8f9.json",
+						"jsonFile" : "cmakeFiles-v1-f824f73cc5a17441643e.json",
 						"kind" : "cmakeFiles",
 						"version" : 
 						{
