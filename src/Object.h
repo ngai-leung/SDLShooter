@@ -14,7 +14,7 @@ struct Player{
     int width = 0;                   
     int height = 0; 
     int speed = 300;
-    int currentHealth = 100;        //当前生命值
+    int currentHealth = 99;        //当前生命值
      Uint32 coolDown =100;
      Uint32 lastShootTime = 0;     
 };
@@ -47,7 +47,7 @@ struct ProjectileEnemy{
     int width = 0 ;
     int height = 0 ;
     int speed = 300;
-    int damage = 10;          //伤害值
+    int damage = 33;          //伤害值
 };
 
 

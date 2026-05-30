@@ -42,6 +42,7 @@ public:
     void updateItems(float deltaTime);             // 更新所有物品
     void renderItems();                            // 渲染物品
     void applyItemEffect(Item* item);              // 玩家拾取物品的效果
+    void renderUI();                               // 渲染UI
     SDL_FPoint getDirection(Enemy* enemy);
 
 
@@ -51,7 +52,9 @@ private:
     Player player;
     Game &game;
     Mix_Music* bgm ;
-
+    SDL_Texture*uiHealth;
+    int heartWidth = 0;   
+    int heartHeight = 0;  
     std::mt19937 gen; // 随机数生成器
     std::uniform_real_distribution<float> dis; // 随机数分布
 

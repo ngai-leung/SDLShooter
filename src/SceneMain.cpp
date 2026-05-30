@@ -69,8 +69,10 @@ void SceneMain::render()
     renderEnemies();
     // 渲染道具
     renderItems();
-    // 最后渲染爆炸效果
-    renderExplosions(); 
+    // 渲染爆炸效果
+    renderExplosions();
+    // 渲染UI
+    renderUI();
 }
 
 void SceneMain::handleEvent(SDL_Event *event) {}
@@ -84,6 +86,14 @@ void SceneMain::init()
     }else {
     Mix_PlayMusic(bgm, -1);
     }
+
+    //读取ui Health
+    uiHealth  = IMG_LoadTexture(game.getRenderer(), "assets/image/Health UI Black.png");
+    // 获取心形纹理原始尺寸
+    SDL_QueryTexture(uiHealth, NULL, NULL, &heartWidth, &heartHeight);
+    // 可选：若希望固定绘制大小（例如 32x32），可重新赋值
+    // heartWidth = 32;
+    // heartHeight = 32;
 
     //读取音效资源
     sounds["player_shoot"] = Mix_LoadWAV("assets/sound/laser_shoot4.wav");
@@ -238,6 +248,11 @@ void SceneMain::clean()
         }
     }
     items.clear();
+
+    //清理ui
+    if(uiHealth != nullptr){
+        SDL_DestroyTexture(uiHealth);
+    }
 
 
     // 销毁玩家纹理
@@ -616,11 +631,11 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
             // 生成爆炸特效（敌机中心）
             float centerX = enemy->position.x + enemy->width / 2.0f;
             float centerY = enemy->position.y + enemy->height / 2.0f;
-            createExplosion(centerX, centerY, true);
+            createExplosion(centerX, centerY, false);
 
             // 扣血（有护盾则免伤）
             if (!hasShield) {
-                player.currentHealth -= 40;
+                player.currentHealth -= 33;
             }
 
             // 删除敌机
@@ -835,7 +850,7 @@ void SceneMain::applyItemEffect(Item* item)
     Uint32 now = SDL_GetTicks();
     switch (item->type) {
         case ItemType::Life:
-            player.currentHealth += 20;
+            player.currentHealth += 33;
             if (player.currentHealth > 100) player.currentHealth = 100;
             break;
         case ItemType::Shield:
@@ -863,4 +878,35 @@ void SceneMain::applyItemEffect(Item* item)
             break;
     }
     Mix_PlayChannel(1, sounds["get_item"], 0);
+}
+
+void SceneMain::renderUI()
+{
+    const int startX = 20;
+    const int startY = 20;
+    const int spacing = 10;
+    const int maxHealth = 100;
+    const int heartCount = 3;
+
+    // 每颗心对应的生命值（向上取整） 100/3 = 33.33 → 34
+    const int perHeart = (maxHealth + heartCount - 1) / heartCount; // 34
+    int activeHearts = (player.currentHealth + perHeart - 1) / perHeart;
+    if (activeHearts > heartCount) activeHearts = heartCount;
+    if (activeHearts < 0) activeHearts = 0;
+
+    for (int i = 0; i < heartCount; ++i) {
+        if (i < activeHearts) {
+            SDL_SetTextureColorMod(uiHealth, 255, 80, 80);   // 红色
+        } else {
+            SDL_SetTextureColorMod(uiHealth, 80, 80, 80);    // 灰色
+        }
+        SDL_Rect dstRect = {
+            startX + i * (heartWidth + spacing),
+            startY,
+            heartWidth,
+            heartHeight
+        };
+        SDL_RenderCopy(game.getRenderer(), uiHealth, NULL, &dstRect);
+    }
+    SDL_SetTextureColorMod(uiHealth, 255, 255, 255);
 }
