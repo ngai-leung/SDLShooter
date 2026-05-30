@@ -2,6 +2,7 @@
 #include "SDL.h"
 #include "SDL_image.h"
 #include "Game.h"
+#include "SceneEnd.h"
 #include <random>
 #include <string>
 
@@ -14,49 +15,42 @@ SceneMain::~SceneMain() {}
 
 void SceneMain::update(float deltaTime) 
 {
-    if (gameOver) {
-    updateExplosions(deltaTime);
-    return;
-    }
-
     // 更新道具效果
     Uint32 now = SDL_GetTicks();
     if (hasShield && now >= shieldEndTime) {
         hasShield = false;
-        SDL_SetTextureColorMod(player.texture, 255, 255, 255);   // 恢复白色
+        SDL_SetTextureColorMod(player.texture, 255, 255, 255);
     }
     if (timeSlowActive && now >= timeSlowEndTime) {
         timeSlowActive = false;
-        // 恢复所有敌人的速度
-        for (auto enemy : Enemies) {
-            enemy->speed = originalEnemySpeed;
-        }
-        for (auto bullet : ProjectileEnemies) {
-            bullet->speed = originalEnemyBulletSpeed;
-        }
+        for (auto enemy : Enemies) enemy->speed = originalEnemySpeed;
+        for (auto bullet : ProjectileEnemies) bullet->speed = originalEnemyBulletSpeed;
     }
     
     keyboardControls(deltaTime);
     updateProjectiles(deltaTime);
-    updateEnemyProjectiles(deltaTime); //更新敌机子弹
-    spawEnemy(); //生成敌机
-    updateEnemies(deltaTime); //更新敌机
-    checkCollisions();//检查碰撞
-    updateItems(deltaTime); // 更新道具
-    updateExplosions(deltaTime);   // 更新爆炸效果
-    
+    updateEnemyProjectiles(deltaTime);
+    spawEnemy();
+    updateEnemies(deltaTime);
+    checkCollisions();
+
+    // 如果玩家死亡，不再执行后续更新，直接切换场景
+    if (shouldEnd) {
+        Game::getInstance()->changeScene(new SceneEnd(score));
+        return;
+    }
+
+    updateItems(deltaTime);
+    updateExplosions(deltaTime);
 }
 
 void SceneMain::render()
 {
-    // 先渲染子弹
     renderPlayerProjectiles();
-
-    ///渲染敌机子弹
     renderEnemyProjectiles();
 
-    // 再渲染玩家（仅在游戏未结束时显示）
-    if (!gameOver && player.texture) {
+    // 渲染玩家
+    if (player.texture) {
         SDL_Rect playerRect = {
             static_cast<int>(player.position.x),
             static_cast<int>(player.position.y),
@@ -66,13 +60,9 @@ void SceneMain::render()
         SDL_RenderCopy(game.getRenderer(), player.texture, NULL, &playerRect);
     }
 
-    // 渲染敌机
     renderEnemies();
-    // 渲染道具
     renderItems();
-    // 渲染爆炸效果
     renderExplosions();
-    // 渲染UI
     renderUI();
 }
 
@@ -121,7 +111,7 @@ void SceneMain::init()
     if (!player.texture) {
         SDL_LogError(SDL_LOG_CATEGORY_ERROR,
                      "Failed to load player texture: %s", IMG_GetError());
-        return;
+        
     }
     SDL_QueryTexture(player.texture, NULL, NULL, &player.width, &player.height);
     player.width /= 4;
@@ -137,7 +127,7 @@ void SceneMain::init()
         SDL_LogError(SDL_LOG_CATEGORY_ERROR,
                      "Failed to load projectile texture: %s", IMG_GetError());
         // 不影响玩家，但子弹将无法使用
-        return;
+        
     }
 
     SDL_QueryTexture(ProjectilePlayerTemplate.texture, NULL, NULL,
@@ -153,7 +143,7 @@ void SceneMain::init()
         SDL_LogError(SDL_LOG_CATEGORY_ERROR,
                      "Failed to load enemy texture: %s", IMG_GetError());
         // 不影响玩家，但子弹将无法使用
-        return;
+        
     }
 
     SDL_QueryTexture(EnemyTemplate.texture, NULL, NULL,
@@ -174,7 +164,7 @@ void SceneMain::init()
     ExplosionTemplate.texture = IMG_LoadTexture(game.getRenderer(), "assets/effect/explosion.png");
     if (!ExplosionTemplate.texture) {
         SDL_LogError(SDL_LOG_CATEGORY_ERROR, "Failed to load explosion texture: %s", IMG_GetError());
-        return;
+        
     }
     int texW, texH;
     SDL_QueryTexture(ExplosionTemplate.texture, NULL, NULL, &texW, &texH);
@@ -537,7 +527,7 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
 
 
 
-    void SceneMain::checkCollisions()
+void SceneMain::checkCollisions()
 {
     // 1. 玩家子弹 vs 敌机
     for (auto pit = ProjectilePlayers.begin(); pit != ProjectilePlayers.end(); ) {
@@ -559,23 +549,20 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
                 enemy->height
             };
             if (SDL_HasIntersection(&projRect, &enemyRect)) {
-                
-                // 子弹击中敌机
                 enemy->currentHealth -= proj->damage;
-                hit = true;  // 子弹命中，无论敌机是否死亡，子弹都消失
+                hit = true;
                 if (enemy->currentHealth <= 0) {
                     float centerX = enemy->position.x + enemy->width / 2.0f;
                     float centerY = enemy->position.y + enemy->height / 2.0f;
-                    createExplosion(centerX, centerY, false);   // 生成爆炸
-                    dropItem(centerX, centerY);   // 生成掉落物
-                    // 敌机死亡，从列表中移除并删除
-                    score += 10; // 增加分数
+                    createExplosion(centerX, centerY, false);
+                    dropItem(centerX, centerY);
+                    score += 10;
                     delete enemy;
                     eit = Enemies.erase(eit);
                 } else {
                     ++eit;
                 }
-                break; // 一颗子弹只击中一个敌人
+                break;
             } else {
                 ++eit;
             }
@@ -605,20 +592,14 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
             player.height
         };
         if (SDL_HasIntersection(&projRect, &playerRect)) {
-                if (!hasShield) {
-                player.currentHealth -= proj->damage;// 有护盾时什么都不做，不扣血也不取消护盾
-                }
+            if (!hasShield) {
+                player.currentHealth -= proj->damage;
+            }
             delete proj;
             pit = ProjectileEnemies.erase(pit);
-            // 如果玩家死亡，可以设置游戏结束标志（后面实现）
-        if (player.currentHealth <= 0 && !gameOver) {
-            float centerX = player.position.x + player.width / 2.0f;
-            float centerY = player.position.y + player.height / 2.0f;
-            createExplosion(centerX, centerY, true);
-            gameOver = true;
-            SDL_Log("Player died!");
-                //game.quitGame();
-                //return;
+            if (player.currentHealth <= 0) {
+                shouldEnd = true;
+                return;
             }
         } else {
             ++pit;
@@ -641,27 +622,17 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
             enemy->height
         };
         if (SDL_HasIntersection(&playerRect, &enemyRect)) {
-            // 生成爆炸特效（敌机中心）
             float centerX = enemy->position.x + enemy->width / 2.0f;
             float centerY = enemy->position.y + enemy->height / 2.0f;
             createExplosion(centerX, centerY, false);
-
-            // 扣血（有护盾则免伤）
             if (!hasShield) {
                 player.currentHealth -= 33;
             }
-
-            // 删除敌机
             delete enemy;
             eit = Enemies.erase(eit);
-
-            // 玩家死亡处理
-            if (player.currentHealth <= 0 && !gameOver) {
-                float playerCenterX = player.position.x + player.width / 2.0f;
-                float playerCenterY = player.position.y + player.height / 2.0f;
-                createExplosion(playerCenterX, playerCenterY, true);
-                gameOver = true;
-                SDL_Log("Player died by collision!");
+            if (player.currentHealth <= 0) {
+                shouldEnd = true;
+                return;
             }
         } else {
             ++eit;

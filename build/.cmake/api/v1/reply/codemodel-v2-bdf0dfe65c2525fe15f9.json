@@ -106,14 +106,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-Debug-536f133bc1ae3b676615.json",
+					"jsonFile" : "target-ALL_BUILD-Debug-56b36e6af52327a35042.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "SDLShooter-Windows::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SDLShooter-Windows-Debug-3afeb7126457cc0b55f9.json",
+					"jsonFile" : "target-SDLShooter-Windows-Debug-23dfb67012578e426462.json",
 					"name" : "SDLShooter-Windows",
 					"projectIndex" : 0
 				},
@@ -231,14 +231,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-Release-536f133bc1ae3b676615.json",
+					"jsonFile" : "target-ALL_BUILD-Release-56b36e6af52327a35042.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "SDLShooter-Windows::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SDLShooter-Windows-Release-6e5f475f01d6becfa744.json",
+					"jsonFile" : "target-SDLShooter-Windows-Release-e7cbcfed8e2b8dc26c69.json",
 					"name" : "SDLShooter-Windows",
 					"projectIndex" : 0
 				},
@@ -356,14 +356,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-MinSizeRel-536f133bc1ae3b676615.json",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-56b36e6af52327a35042.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "SDLShooter-Windows::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SDLShooter-Windows-MinSizeRel-b578b28547a0eb39d5df.json",
+					"jsonFile" : "target-SDLShooter-Windows-MinSizeRel-1425ed160f0fc430208b.json",
 					"name" : "SDLShooter-Windows",
 					"projectIndex" : 0
 				},
@@ -481,14 +481,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-536f133bc1ae3b676615.json",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-56b36e6af52327a35042.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "SDLShooter-Windows::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SDLShooter-Windows-RelWithDebInfo-3e7f8aa0696daf29c8eb.json",
+					"jsonFile" : "target-SDLShooter-Windows-RelWithDebInfo-25be6aff9601901c7c70.json",
 					"name" : "SDLShooter-Windows",
 					"projectIndex" : 0
 				},

@@ -1,5 +1,6 @@
 #include "Game.h"
 #include "SceneMain.h"
+#include "SceneTitle.h"
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_mixer.h>
@@ -109,9 +110,17 @@ void Game::init()
     SDL_QueryTexture(farStars.texture, nullptr, nullptr, &farStars.width, &farStars.height);
     farStars.speed = 20;
 
+    //载入字体
+    titleFont = TTF_OpenFont("assets/font/VonwaonBitmap-16px.ttf", 64);
+    textFont = TTF_OpenFont("assets/font/VonwaonBitmap-16px.ttf", 32);
+    if(titleFont == nullptr || textFont == nullptr) {
+        SDL_LogError(SDL_LOG_CATEGORY_ERROR, "SDL_ttf could not initialize! SDL_ttf Error: %s", TTF_GetError());
+        isRunning = false;
+        return;
+    }
 
     // 创建并初始化场景
-    currentScene = new SceneMain();
+    currentScene = new SceneTitle();
     currentScene->init();    // ★ 别忘了调用 init
 }
 
@@ -123,13 +132,20 @@ void Game::clean()
         delete currentScene;
         currentScene = nullptr;
     }
-
+    //释放字体
+    if(titleFont != nullptr) {
+        TTF_CloseFont(titleFont);
+    }
+    if(textFont != nullptr) {
+        TTF_CloseFont(textFont);
+    }
     if(nearStars.texture != nullptr) {
         SDL_DestroyTexture(nearStars.texture);
     }
     if(farStars.texture != nullptr) {
         SDL_DestroyTexture(farStars.texture);
     }
+
 
     // 安全销毁 SDL_image 资源
     IMG_Quit();
@@ -156,14 +172,18 @@ void Game::clean()
     SDL_Quit();
 }
 
-void Game::changeScene(Scene* scene)
-{
+void Game::changeScene(Scene* scene) {
+    SDL_Log("changeScene called");
     if (currentScene) {
+        SDL_Log("Cleaning old scene");
         currentScene->clean();
         delete currentScene;
+        SDL_Log("Old scene deleted");
     }
     currentScene = scene;
+    SDL_Log("Initializing new scene");
     currentScene->init();
+    SDL_Log("New scene initialized");
 }
 
 void Game::handleEvents()

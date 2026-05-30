@@ -2,9 +2,12 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include "Object.h"
 #include "Scene.h"
 #include <SDL.h>
-#include "Object.h"
+#include <SDL_image.h>
+#include <SDL_ttf.h>
+
 
 class Game
 {
@@ -30,12 +33,18 @@ public:
     SDL_Renderer* getRenderer() { return renderer; }
     int getWindowWidth() { return windowWidth; }  //获取窗口宽度
     int getWindowHeight() { return windowHeight; }   //获取窗口高度
+    TTF_Font* getTitleFont() const { return titleFont; }
+    TTF_Font* getTextFont() const { return textFont; }
 
 private:
     Game();
     //删除拷贝和赋值构造函数
     Game(const Game&) = delete;
     Game& operator=(const Game&) = delete;
+
+    TTF_Font* titleFont;
+    TTF_Font* textFont;
+
 
     bool isRunning = true;
     Scene* currentScene = nullptr;

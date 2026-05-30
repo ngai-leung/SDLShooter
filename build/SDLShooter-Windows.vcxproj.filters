@@ -7,7 +7,13 @@
     <ClCompile Include="C:\SDLShooter\src\Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\SDLShooter\src\SceneTitle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\SDLShooter\src\SceneMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SDLShooter\src\SceneEnd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
