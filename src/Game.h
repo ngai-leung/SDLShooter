@@ -4,6 +4,7 @@
 
 #include "Scene.h"
 #include <SDL.h>
+#include "Object.h"
 
 class Game
 {
@@ -21,6 +22,8 @@ public:
     void handleEvents();
     void update(float deltaTime);
     void render();
+    void backgroundUpdate(float deltaTime);
+    void backgroundRender();
     void quitGame(){ isRunning = false; }
 
     SDL_Window* getWindow() { return window; }
@@ -43,6 +46,9 @@ private:
     int FPS = 60;
     Uint32 frameTime;
     float deltaTime;
+
+    Background nearStars;
+    Background farStars;
 };
 
 #endif

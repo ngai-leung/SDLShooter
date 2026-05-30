@@ -5,7 +5,9 @@
 #include "Object.h"
 #include <list>
 #include <random>
-#include <vector>
+#include <map>
+#include <SDL.h>
+#include <SDL_mixer.h>
 
 
 
@@ -33,7 +35,7 @@ public:
     void renderEnemies();
     void shootEnemy(Enemy* enemy);
     void checkCollisions(); //检查碰撞
-    void createExplosion(float x, float y);
+    void createExplosion(float x, float y, bool isPlayer);
     void updateExplosions(float deltaTime);
     void renderExplosions();
     void dropItem(float x, float y);               // 在敌机位置掉落物品
@@ -48,6 +50,8 @@ public:
 private:
     Player player;
     Game &game;
+    Mix_Music* bgm ;
+
     std::mt19937 gen; // 随机数生成器
     std::uniform_real_distribution<float> dis; // 随机数分布
 
@@ -66,7 +70,8 @@ private:
     std::list<ProjectilePlayer*> ProjectilePlayers;
     std::list<ProjectileEnemy*> ProjectileEnemies;
     std::list<Explosion> Explosions;
-    std::list<Item*> items;   // 存储爆炸效果（值语义）
+    std::list<Item*> items;   // 存储爆炸效果
+    std::map<std::string, Mix_Chunk*> sounds; // 存储音效
     
     bool gameOver = false;
     // 道具效果标志

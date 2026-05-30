@@ -51,7 +51,7 @@ void SceneMain::render()
     // 先渲染子弹
     renderPlayerProjectiles();
 
-    //渲染敌机子弹
+    ///渲染敌机子弹
     renderEnemyProjectiles();
 
     // 再渲染玩家（仅在游戏未结束时显示）
@@ -77,6 +77,24 @@ void SceneMain::handleEvent(SDL_Event *event) {}
 
 void SceneMain::init()
 {
+    //读取并播放音乐
+    bgm = Mix_LoadMUS("assets/music/03_Racing_Through_Asteroids_Loop.ogg");
+    if (bgm == nullptr) {
+        SDL_LogError(SDL_LOG_CATEGORY_ERROR, "Failed to load music: %s", Mix_GetError());
+    }else {
+    Mix_PlayMusic(bgm, -1);
+    }
+
+    //读取音效资源
+    sounds["player_shoot"] = Mix_LoadWAV("assets/sound/laser_shoot4.wav");
+    sounds["enemy_shoot"] = Mix_LoadWAV("assets/sound/xs_laser.wav");
+    sounds["player_explosion"] = Mix_LoadWAV("assets/sound/explosion1.wav");
+    sounds["enemy_explosion"] = Mix_LoadWAV("assets/sound/explosion3.wav");
+    //sounds["hit"] = Mix_LoadWAV("assets/sound/eff11.wav");
+    sounds["get_item"] = Mix_LoadWAV("assets/sound/eff5.wav");
+
+
+
     //随机生成敌机
     std::random_device rd; // 用于生成随机数种子
     gen = std::mt19937(rd());
@@ -186,6 +204,14 @@ void SceneMain::init()
 
 void SceneMain::clean()
 {
+    //清理音效容器
+    for (auto &sound : sounds) {
+        if(sound.second != nullptr) {
+            Mix_FreeChunk(sound.second);
+        }
+    }
+    sounds.clear();
+
     // 清理活跃子弹（只删除对象，纹理由模板统一销毁）
     for (auto projectile : ProjectilePlayers) {
         delete projectile;
@@ -254,6 +280,11 @@ void SceneMain::clean()
         ItemTimeTemplate.texture = nullptr;
     }
 
+    //清理音乐资源
+    if (bgm != nullptr) {
+        Mix_HaltMusic();
+        Mix_FreeMusic(bgm);
+    }
 
 }
 
@@ -301,6 +332,7 @@ void SceneMain::shootPlayer()
     projectile->width = ProjectilePlayerTemplate.width;
     projectile->height = ProjectilePlayerTemplate.height;
     projectile->speed = ProjectilePlayerTemplate.speed;
+    Mix_PlayChannel(-1, sounds["player_shoot"], 0);
 
     // 子弹初始位置：玩家上方中央
     projectile->position.x = player.position.x + player.width / 2.0f - projectile->width / 2.0f;
@@ -340,6 +372,7 @@ void SceneMain::updateEnemyProjectiles(float deltaTime)
             projectile->position.y > game.getWindowHeight()) {
             delete projectile;
             it = ProjectileEnemies.erase(it);
+            //Mix_PlayChannel(-1,sounds["hit"],0);
         } else {
             ++it;
         }
@@ -444,6 +477,7 @@ void SceneMain::shootEnemy(Enemy* enemy)
     projectile->width  = ProjectileEnemyTemplate.width;
     projectile->height = ProjectileEnemyTemplate.height;
     projectile->speed  = ProjectileEnemyTemplate.speed;  // 需要确保模板有有效值
+    //Mix_PlayChannel(-1, sounds["enemy_shoot"], 0);
     if (timeSlowActive) {
         projectile->speed /= 2;
         }
@@ -505,7 +539,7 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
                 if (enemy->currentHealth <= 0) {
                     float centerX = enemy->position.x + enemy->width / 2.0f;
                     float centerY = enemy->position.y + enemy->height / 2.0f;
-                    createExplosion(centerX, centerY);   // 生成爆炸
+                    createExplosion(centerX, centerY, false);   // 生成爆炸
                     dropItem(centerX, centerY);   // 生成掉落物
                     // 敌机死亡，从列表中移除并删除
                     delete enemy;
@@ -552,7 +586,7 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
         if (player.currentHealth <= 0 && !gameOver) {
             float centerX = player.position.x + player.width / 2.0f;
             float centerY = player.position.y + player.height / 2.0f;
-            createExplosion(centerX, centerY);
+            createExplosion(centerX, centerY, true);
             gameOver = true;
             SDL_Log("Player died!");
                 //game.quitGame();
@@ -582,7 +616,7 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
             // 生成爆炸特效（敌机中心）
             float centerX = enemy->position.x + enemy->width / 2.0f;
             float centerY = enemy->position.y + enemy->height / 2.0f;
-            createExplosion(centerX, centerY);
+            createExplosion(centerX, centerY, true);
 
             // 扣血（有护盾则免伤）
             if (!hasShield) {
@@ -597,7 +631,7 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
             if (player.currentHealth <= 0 && !gameOver) {
                 float playerCenterX = player.position.x + player.width / 2.0f;
                 float playerCenterY = player.position.y + player.height / 2.0f;
-                createExplosion(playerCenterX, playerCenterY);
+                createExplosion(playerCenterX, playerCenterY, true);
                 gameOver = true;
                 SDL_Log("Player died by collision!");
             }
@@ -626,7 +660,7 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
 }
 
 
-    void SceneMain::createExplosion(float x, float y)
+    void SceneMain::createExplosion(float x, float y, bool isPlayer)
 {
     Explosion exp;
     exp.texture = ExplosionTemplate.texture;
@@ -640,6 +674,17 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
     exp.position.x = x - exp.frameWidth / 2.0f;
     exp.position.y = y - exp.frameHeight / 2.0f;
     Explosions.push_back(exp);
+
+    // 播放对应的爆炸音效
+    if (isPlayer) {
+        if (sounds["player_explosion"]) {
+            Mix_PlayChannel(-1, sounds["player_explosion"], 0);
+            }
+        }  else {
+        if (sounds["enemy_explosion"]) {
+            Mix_PlayChannel(-1, sounds["enemy_explosion"], 0);
+            }
+        }
 }
 
 void SceneMain::updateExplosions(float deltaTime)
@@ -769,6 +814,7 @@ void SceneMain::updateItems(float deltaTime)
 
         ++it;
     }
+    
 }
 
 void SceneMain::renderItems()
@@ -816,4 +862,5 @@ void SceneMain::applyItemEffect(Item* item)
             }
             break;
     }
+    Mix_PlayChannel(1, sounds["get_item"], 0);
 }

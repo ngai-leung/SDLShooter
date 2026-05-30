@@ -2,6 +2,8 @@
 #include "SceneMain.h"
 #include <SDL.h>
 #include <SDL_image.h>
+#include <SDL_mixer.h>
+#include <SDL_ttf.h>
 
 Game::Game()
 {
@@ -73,6 +75,32 @@ void Game::init()
         return;
     }
 
+    // 初始化 SDL_mixer
+    int flags = MIX_INIT_MP3 | MIX_INIT_OGG;
+    int initted = Mix_Init(flags);
+    if ((initted & flags) != flags) {
+        SDL_LogError(SDL_LOG_CATEGORY_ERROR, "SDL_mixer could not initialize! Required: %d, Got: %d, Error: %s", flags, initted, Mix_GetError());
+        isRunning = false;
+        return;
+    }
+
+    //打开音频设备
+    if(Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) == -1) {
+        SDL_LogError(SDL_LOG_CATEGORY_ERROR, "SDL_mixer could not initialize! SDL_mixer Error: %s", Mix_GetError());
+        isRunning = false;
+        return;
+    }
+    Mix_AllocateChannels(32);           // 分配 32 个音频通道
+    Mix_VolumeMusic(MIX_MAX_VOLUME / 4); // 设置音量
+    Mix_Volume(-1, MIX_MAX_VOLUME / 8); // 设置音效音量
+
+    //初始化背景卷轴
+    nearStars.texture = IMG_LoadTexture(renderer, "assets/image/Stars-A.png");
+    SDL_QueryTexture(nearStars.texture, nullptr, nullptr, &nearStars.width, &nearStars.height);
+    farStars.texture = IMG_LoadTexture(renderer, "assets/image/Stars-B.png");
+    SDL_QueryTexture(farStars.texture, nullptr, nullptr, &farStars.width, &farStars.height);
+    farStars.speed = 20;
+
 
     // 创建并初始化场景
     currentScene = new SceneMain();
@@ -80,7 +108,7 @@ void Game::init()
 }
 
 void Game::clean()
-{
+{   
     // 先销毁场景
     if (currentScene) {
         currentScene->clean();
@@ -88,9 +116,19 @@ void Game::clean()
         currentScene = nullptr;
     }
 
+    if(nearStars.texture != nullptr) {
+        SDL_DestroyTexture(nearStars.texture);
+    }
+    if(farStars.texture != nullptr) {
+        SDL_DestroyTexture(farStars.texture);
+    }
+
     // 安全销毁 SDL_image 资源
     IMG_Quit();
 
+    // 安全销毁 SDL_mixer 资源
+    Mix_CloseAudio();
+    Mix_Quit();
 
 
     // 安全销毁 SDL 资源（必须判空）
@@ -131,7 +169,8 @@ void Game::handleEvents()
 }
 
 void Game::update(float deltaTime)
-{
+{   
+    backgroundUpdate(deltaTime);
     if (currentScene) {
         currentScene->update(deltaTime);
     }
@@ -141,9 +180,46 @@ void Game::render()
 {
     SDL_RenderClear(renderer);
 
+    //渲染星空背景
+    backgroundRender();
+
     if (currentScene) {
         currentScene->render();
     }
 
     SDL_RenderPresent(renderer);
+}
+
+void Game::backgroundUpdate(float deltaTime)
+{
+    // 近处星星（速度快）
+    nearStars.offset += nearStars.speed * deltaTime;
+    if (nearStars.offset >= 0) {
+        nearStars.offset = -nearStars.height;
+    }
+
+    // 远处星星（速度慢）
+    farStars.offset += farStars.speed * deltaTime;
+    if (farStars.offset >= 0) {
+        farStars.offset = -farStars.height;
+    }
+}
+
+void Game::backgroundRender()
+{
+    // 渲染远处星星（速度慢，滚动慢）
+    for (int y = farStars.offset; y < windowHeight; y += farStars.height) {
+        for (int x = 0; x < windowWidth; x += farStars.width) {
+            SDL_Rect dstRect = { x, y, farStars.width, farStars.height };
+            SDL_RenderCopy(renderer, farStars.texture, nullptr, &dstRect);
+        }
+    }
+
+    // 渲染近处星星（速度快，滚动快）
+    for (int y = nearStars.offset; y < windowHeight; y += nearStars.height) {
+        for (int x = 0; x < windowWidth; x += nearStars.width) {
+            SDL_Rect dstRect = { x, y, nearStars.width, nearStars.height };
+            SDL_RenderCopy(renderer, nearStars.texture, nullptr, &dstRect);
+        }
+    }
 }

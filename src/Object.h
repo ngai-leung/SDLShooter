@@ -74,7 +74,15 @@ struct Item {
     int bounceCount = 0;      // 已碰撞次数（用于左右碰壁）
 };
 
+struct Background {
+    SDL_Texture* texture = nullptr;
+    SDL_FPoint position = {0, 0};
+    int width = 0;
+    int height = 0;
+    int speed = 30;
+    float offset = 0.0f; // 用于实现滚动效果
 
+};
 
 
 
