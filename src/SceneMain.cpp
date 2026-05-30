@@ -3,6 +3,7 @@
 #include "SDL_image.h"
 #include "Game.h"
 #include <random>
+#include <string>
 
 
 SceneMain::SceneMain() : game(*Game::getInstance())
@@ -89,6 +90,10 @@ void SceneMain::init()
 
     //读取ui Health
     uiHealth  = IMG_LoadTexture(game.getRenderer(), "assets/image/Health UI Black.png");
+
+    //载入字体
+    scoreFont = TTF_OpenFont("assets/font/VonwaonBitmap-12px.ttf", 24);
+
     // 获取心形纹理原始尺寸
     SDL_QueryTexture(uiHealth, NULL, NULL, &heartWidth, &heartHeight);
     // 可选：若希望固定绘制大小（例如 32x32），可重新赋值
@@ -253,6 +258,13 @@ void SceneMain::clean()
     if(uiHealth != nullptr){
         SDL_DestroyTexture(uiHealth);
     }
+
+    //清理字体
+    if (scoreFont != nullptr) {
+        TTF_CloseFont(scoreFont);
+    }
+        
+
 
 
     // 销毁玩家纹理
@@ -557,6 +569,7 @@ SDL_FPoint SceneMain::getDirection(Enemy* enemy)
                     createExplosion(centerX, centerY, false);   // 生成爆炸
                     dropItem(centerX, centerY);   // 生成掉落物
                     // 敌机死亡，从列表中移除并删除
+                    score += 10; // 增加分数
                     delete enemy;
                     eit = Enemies.erase(eit);
                 } else {
@@ -909,4 +922,25 @@ void SceneMain::renderUI()
         SDL_RenderCopy(game.getRenderer(), uiHealth, NULL, &dstRect);
     }
     SDL_SetTextureColorMod(uiHealth, 255, 255, 255);
+
+        // 2. 渲染得分文本
+    if (scoreFont != nullptr) {
+        std::string scoreText = "Score: " + std::to_string(score);
+        SDL_Color color = { 255, 255, 255, 255 }; // 白色
+        SDL_Surface* surface = TTF_RenderText_Solid(scoreFont, scoreText.c_str(), color);
+        if (surface) {
+            SDL_Texture* texture = SDL_CreateTextureFromSurface(game.getRenderer(), surface);
+            int textWidth = surface->w;
+            int textHeight = surface->h;
+            SDL_Rect dstRect = {
+                game.getWindowWidth() - textWidth - 20,
+                20,
+                textWidth,
+                textHeight
+            };
+            SDL_RenderCopy(game.getRenderer(), texture, NULL, &dstRect);
+            SDL_FreeSurface(surface);
+            SDL_DestroyTexture(texture);
+        }
+    }
 }

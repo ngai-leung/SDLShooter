@@ -94,6 +94,14 @@ void Game::init()
     Mix_VolumeMusic(MIX_MAX_VOLUME / 4); // 设置音量
     Mix_Volume(-1, MIX_MAX_VOLUME / 8); // 设置音效音量
 
+    // 初始化 SDL_ttf
+    if (TTF_Init() == -1) {
+
+        SDL_LogError(SDL_LOG_CATEGORY_ERROR, "SDL_ttf could not initialize! SDL_ttf Error: %s", TTF_GetError());
+        isRunning = false;
+        return;
+    }
+
     //初始化背景卷轴
     nearStars.texture = IMG_LoadTexture(renderer, "assets/image/Stars-A.png");
     SDL_QueryTexture(nearStars.texture, nullptr, nullptr, &nearStars.width, &nearStars.height);
@@ -129,6 +137,10 @@ void Game::clean()
     // 安全销毁 SDL_mixer 资源
     Mix_CloseAudio();
     Mix_Quit();
+
+    //清理 SDL_ttf 资源
+    TTF_Quit();
+    
 
 
     // 安全销毁 SDL 资源（必须判空）

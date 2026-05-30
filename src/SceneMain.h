@@ -8,6 +8,7 @@
 #include <map>
 #include <SDL.h>
 #include <SDL_mixer.h>
+#include <SDL_ttf.h>
 
 
 
@@ -53,6 +54,9 @@ private:
     Game &game;
     Mix_Music* bgm ;
     SDL_Texture*uiHealth;
+    TTF_Font* scoreFont;
+    int score = 0;
+
     int heartWidth = 0;   
     int heartHeight = 0;  
     std::mt19937 gen; // 随机数生成器
